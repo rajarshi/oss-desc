@@ -30,9 +30,9 @@
 %%%
 
 \begin{document}
-\title{Foo}
+\title{A Survey of Quantitative Descriptions of Molecular Structure}
 \author{Rajarshi Guha${}^{\dagger}$ and Egon Willighagen${}^{\ddagger}$\\
-${}^{\dagger}$NIH Center for Translational Therapeutics\\9800 Medical
+${}^{\dagger}$NIH Center for Advancing Translational Science\\9800 Medical
 Center Drive  Rockville, MD 20850 \\
 ${}^{\ddagger}$ Somwhere in the Netherlands
 }
@@ -46,6 +46,41 @@ Bar
 \section{Introduction}
 
 
+\section{Running Notes}
+\begin{itemize}
+\item What are descriptors, why are they needed?
+\item Survey of descriptor types, focusing on nature of inputs,
+  complexity, interpretabilty 
+\item Talk about biological descriptors (see paper from Tropsha that
+  uses bioactivity data as descriptors)
+\item Discuss how fingerprints can also be used as descriptors
+\item Also mention descriptors for non-small molecule cases
+  \begin{itemize}
+  \item proteins
+  \item polymers
+  \end{itemize}
+\item Survey of descriptor implementations (OSS and non-OSS)
+  \begin{itemize}
+  \item MOE
+  \item DRAGON
+  \item CDK
+  \item RDKit
+  \item JChem
+  \item PipelinePilot
+  \item OEChem/GraphTK
+  \item JOELib
+  \item CODESSA
+  \item Schrodinger stuff (Meastro?)
+  \end{itemize}
+\item Go into more detail of OSS descriptor implementations
+  \begin{itemize}
+  \item CDK (describe architecture), mention wrappers around the
+    library (CDKDescUI and batch mode)
+  \item PaDEL
+  \end{itemize}
+\item Compare OSS descs to commercial ones - point to the Pfizer/CDD
+  paper that compared MOE and CDK
+\end{itemize}
 \clearpage
 \newpage
 
