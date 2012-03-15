@@ -45,6 +45,60 @@ Bar
 
 \section{Introduction}
 
+Computational methods play an important role in many chemical
+disciplines ranging from drug discovery to materials science. While
+there are a variety of techniques that differ in terms of
+computational complexity, time requirements and so on. However the
+common requirement underlying all these methods is a formal
+description of a the molecular structure. Of course, there are many
+ways to ``describe'' a molecule. A common approach is to describe the
+connectivity, taking into account the types of atoms and bonds. In
+other words, explicit representations of chemical structure such as
+SMILES, SD files and so on. While these descriptions are vital to
+modern chemical information systems, they do not necessarily allow
+computational techniques to be directly applied to them.
+
+Methods that aim to predict chemical and biological properties
+generally require a numerical description of chemical structures. Such
+numerical forms range from a set of 3D coordinates (which coupled with
+appropiate atom types, is sufficient for methods such QM approaches
+and docking) to more abstract numerical descriptions derived from 2D
+or 3D representations which can be useful is statistical approaches.
+
+It is now possible to evaluate thousands of numerical descriptors of
+chemical structure. As will be discussed later, many of these
+descriptors are closely related - one can be substituted for
+another. The choice of descriptors is a well known problem and given a
+large collection of them, approaches to identify a suitable subset
+have been discussed extensively in the literature [REFS]. 
+
+In addition to there being many possible descriptors defined in the
+literature, there are also multiple implementations of a give
+descriptor. These implementations are available in the form of
+libraries (which require one to write a program to use them) or
+complete applications (GUI or command line). As a result, not only
+must one choose one or more descriptors that are relevant to the
+problem at hand, but in addition, one must be concerned about how they
+are calculated and whether such a calculation can be reproduced across
+different implementations of those descriptors. It is easy to
+understand \emph{why} two implementations of the same descriptor can
+lead to different results - the primary reason being the chemistry
+model that underlies the framework or toolkit used to implement the
+descriptor. For example, a descriptor that calculates the number of
+aromatic atoms may be implemented using two toolkits with differing
+aromaticity models, and hence it is possible that the values generated
+by the two implementations will differ. Other sources of differences
+include parameters that may be involved in the descriptor calculation
+and reference data values (such as atomic radii, electronegativity
+values) that are employed during descriptor calculation. While most
+implementations will employ the same data sources for standard
+concepts (e.g., atomic weights), slight differences in these types of
+input data can lead to differences in the final descriptor value. As a
+result, in most cases, two implementations of a descriptor do not
+usually give the exact same value, though they are usually quite
+similar. Explicitly explaining the differences may or may not be
+possible (it is usually more difficult in the cases of commercial
+implementations for which source code is not available).
 
 \section{Running Notes}
 \begin{itemize}
@@ -58,6 +112,7 @@ Bar
   \begin{itemize}
   \item proteins
   \item polymers
+  \item inorganics (maybe ask Maciej for pointers)
   \end{itemize}
 \item Survey of descriptor implementations (OSS and non-OSS)
   \begin{itemize}
