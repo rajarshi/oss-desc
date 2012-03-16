@@ -100,12 +100,83 @@ similar. Explicitly explaining the differences may or may not be
 possible (it is usually more difficult in the cases of commercial
 implementations for which source code is not available).
 
+\section{A Categorization of Descriptors}
+\label{sec:categ-descr}
+
+We have noted that a molecular structure can be characterized using a
+numebr of numerical descriptors. In this section we describe a
+categorization of descriptors. Admittedly, the grouping is somewhat
+arbitrary but serves as a useful guide. In addition, the
+categorization also considers the nature of the chemical structure
+being considered - some descriptors are only useful when applied to
+small molecules, whereas other descriptors are defined specifically
+for polymers or protein structures.
+
+A final class of descriptors are fingerprints. Traditionally, these
+descriptors are represented in the form of bit strings. Binary
+fingerprints can be divided into hashed fingerprints, where
+substructures (such as paths of length $n$) are converted to a string
+representation and then hashed into a randomly selected bit positions,
+or keyed fingerprints, where each bit position corresponds to a unique
+substructural feature. The nature of the features can range from
+simple functional groups (hydroxyl, carbonyl) and topological
+substructures (paths, chains, cycles) to atom environments
+\cite{Bremser1978,Bender:2004aa} and pharmacophoric elements
+\cite{Renner:2006aa}.
+
+While the descriptors mentioned so far are derived from some form of
+chemical structure, an alternative approach is to employ observed
+biological activities of a molecule as descriptors of that molecule.
+This approach was taken by Sedykh et al \cite{Sedykh:2011fk}   who
+hypothesized that dose response data points from high throughput
+dose-reponse assays could be employed as biological descriptors. They
+observed that when such descriptors were combined with traditional
+chemical structure descriptors, the predictive performance of models
+developed using the combined set was better than those developed using
+conventional approaches. A similar approach can be taken using the
+PASS methodology \cite{Poroikov:2007aa}, though this is an indirect
+method - one must predict the PASS profile from the chemical
+structure, which can then be used in subsequent predictive models [REF?].
+
+\section{Descriptor Implementations}
+\label{sec:descr-impl}
+
+A variety of descriptor implementations are available, with most
+cheminformatics toolkits providing implementations of a common set of
+descriptors and fingerprints. Table \ref{tab:impl} summarizes the
+descriptor classes implemented by several toolkits and applications. 
+
+Given the multiple implementations of many descriptors, it is natural
+to compare their performance. As noted previously, it is desirable,
+but unlikely that implementations of the same descriptor using
+different cheminformatcs toolkits will be identical. Gupta et al
+employed SMARTS based descriptors from the CDK and MOE to develop
+decision tree models to predict human liver microsomal metabolic
+stability\cite{Gupta:2010uq}. Their results indicated very similar
+performance between the two implementations. 
+
+One can also directly compare descriptor values generated using
+different implementations. 
+
+A number of physicochemical descriptors commonly employed in
+predictive modeling are themselves models of an experimental
+property. For example, log P can be experimentally measured and a
+number of algorithms have been developed to predict log P
+[REFs]. Given the utility of log P in drug discovery, a number of
+implementations are available. Given that this descriptor is a
+surrogate for an actual experimental property, it is reasonable to
+compare calculated log P values from different implementations to the
+experimentall observed values, rather than between themselves. Figure
+\ref{fig:logp} compares computed log P values from the CDK, ChemAxon
+and ACD Labs for a set of 10,000 molecules taken from the logPstar
+dataset [REF].
+
 \section{Running Notes}
 \begin{itemize}
-\item What are descriptors, why are they needed?
+\item \textbf{Done} What are descriptors, why are they needed?
 \item Survey of descriptor types, focusing on nature of inputs,
   complexity, interpretabilty 
-\item Talk about biological descriptors (see paper from Tropsha that
+\item \textbf{Done} Talk about biological descriptors (see paper from Tropsha that
   uses bioactivity data as descriptors)
 \item Discuss how fingerprints can also be used as descriptors
 \item Also mention descriptors for non-small molecule cases
@@ -143,6 +214,23 @@ implementations for which source code is not available).
 
 \newpage
 
+\ctable[caption={A comparison of Topological Polar Surface Area values
+generated using the CDK and ACD Labs software, for 57,600 molecules
+taken from Pubchem AID 1996},cap={},label={fig:tpsa},botcap,figure]
+{c}
+{}
+{
+  \includegraphics[width=\linewidth]{tpsa-cdk-acd}
+}
+
+\ctable[caption={A comparison of experimental versus calculated logP values
+generated using the CDK, ACD Labs and ChemAxon software, for 10,000 molecules
+taken from the proprietary logPstar dataset [REF?]},cap={},label={fig:logp},botcap,figure]
+{c}
+{}
+{
+  \includegraphics[width=\linewidth]{logp-comp-exptl}
+}
 
 \end{document}
   
