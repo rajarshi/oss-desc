@@ -69,7 +69,7 @@ It is now possible to evaluate thousands of numerical descriptors of
 chemical structure. As will be discussed later, many of these
 descriptors are closely related - one can be substituted for
 another. The choice of descriptors is a well known problem and given a
-large collection of them, approaches to identify a suitable subset
+large collection of them, approaches to identify a suitable subset  
 have been discussed extensively in the literature [REFS]. 
 
 In addition to there being many possible descriptors defined in the
@@ -112,31 +112,36 @@ being considered - some descriptors are only useful when applied to
 small molecules, whereas other descriptors are defined specifically
 for polymers or protein structures.
 
-A final class of descriptors are fingerprints. Traditionally, these
-descriptors are represented in the form of bit strings. Binary
-fingerprints can be divided into hashed fingerprints, where
-substructures (such as paths of length $n$) are converted to a string
-representation and then hashed into a randomly selected bit positions,
-or keyed fingerprints, where each bit position corresponds to a unique
-substructural feature. The nature of the features can range from
-simple functional groups (hydroxyl, carbonyl) and topological
-substructures (paths, chains, cycles) to atom environments
-\cite{Bremser1978,Bender:2004aa} and pharmacophoric elements
-\cite{Renner:2006aa}.
+\textbf{Fingerprints} A final class of descriptors are
+fingerprints. Traditionally, these descriptors are represented in the
+form of bit strings. Binary fingerprints can be divided into hashed
+fingerprints, where substructures (such as paths of length $n$) are
+converted to a string representation and then hashed into a randomly
+selected bit positions, or keyed fingerprints, where each bit position
+corresponds to a unique substructural feature. The nature of the
+features can range from simple functional groups (hydroxyl, carbonyl)
+and topological substructures (paths, chains, cycles) to atom
+environments \cite{Bremser1978,Bender:2004aa} and pharmacophoric
+elements \cite{Renner:2006aa}. Depending on the definition,
+fingerprints can work with topology only or may require 3D
+conformations. The latter class of fingerprints are usually related to
+3D pharmacophores and most fingerprint definitions only require
+connectivity information.
 
-While the descriptors mentioned so far are derived from some form of
-chemical structure, an alternative approach is to employ observed
-biological activities of a molecule as descriptors of that molecule.
-This approach was taken by Sedykh et al \cite{Sedykh:2011fk}   who
-hypothesized that dose response data points from high throughput
-dose-reponse assays could be employed as biological descriptors. They
-observed that when such descriptors were combined with traditional
-chemical structure descriptors, the predictive performance of models
-developed using the combined set was better than those developed using
-conventional approaches. A similar approach can be taken using the
-PASS methodology \cite{Poroikov:2007aa}, though this is an indirect
-method - one must predict the PASS profile from the chemical
-structure, which can then be used in subsequent predictive models [REF?].
+\textbf{Bioactivity as a descriptor} While the descriptors mentioned
+so far are derived from some form of chemical structure, an
+alternative approach is to employ observed biological activities of a
+molecule as descriptors of that molecule.  This approach was taken by
+Sedykh et al \cite{Sedykh:2011fk} who hypothesized that dose response
+data points from high throughput dose-reponse assays could be employed
+as biological descriptors. They observed that when such descriptors
+were combined with traditional chemical structure descriptors, the
+predictive performance of models developed using the combined set was
+better than those developed using conventional approaches. A similar
+approach can be taken using the PASS methodology
+\cite{Poroikov:2007aa}, though this is an indirect method - one must
+predict the PASS profile from the chemical structure, which can then
+be used in subsequent predictive models [REF?].
 
 \section{Descriptor Implementations}
 \label{sec:descr-impl}
