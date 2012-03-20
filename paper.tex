@@ -133,7 +133,7 @@ rapidly computed for graphs corresponding to small molecule structures
 (even though they may be computationally intractable on much larger
 graphs). While this class of descriptors have been used extensively in
 predictive modeling applications [REFS], a key drawback is their lack
-of interpretability. Given the abstract nature of the many graph
+of interpretability. Given the abstract nature of many graph
 invariants and information theoretic descriptors, their use in
 predictive models makes it difficult to explain the model in simple
 physicochemical terms.
@@ -177,6 +177,30 @@ A variety of descriptor implementations are available, with most
 cheminformatics toolkits providing implementations of a common set of
 descriptors and fingerprints. Table \ref{tab:impl} summarizes the
 descriptor classes implemented by several toolkits and applications. 
+
+While library calls for descriptor evaluation is the most flexible
+approach, it is not useful for non-programmers as well as users who
+simply need a descriptor matrix for modeling or searching. As a
+result, GUI or command line wrappers around descriptor APIs enable
+easier usage. The CDKDescUI
+application(\url{http://rguha.net/code/java/cdkdesc.html}) is a Java
+Swing application that exposes the CDK descriptor and fingerprint
+API's. It allows the users to specify a SMILES or SD file and evaluate
+a selected set of descriptors or fingerprints and export them to a
+text file. The application also has a command line mode that can be
+run in server environments. A similar application is PaDEL
+(\url{http://padel.nus.edu.sg/software/padeldescriptor/}) that
+includes the CDK descriptors and also implements a number of
+additional descriptors [SOME MENTION OF THESE?]
+
+In addition to libraries and their wrappers there are various GUI
+applications that allow easy descriptor calculations. Examples include
+Bioclipse \cite{Spjuth:2007aa}, MOE (Chemical Computing Group) and
+Maestro (Schr\"{o}dinger, Inc.)
+
+\subsection{Comparing implementations}
+\label{sec:comp-impl}
+
 
 Given the multiple implementations of many descriptors, it is natural
 to compare their performance. As noted previously, it is desirable,
