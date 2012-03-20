@@ -112,6 +112,33 @@ being considered - some descriptors are only useful when applied to
 small molecules, whereas other descriptors are defined specifically
 for polymers or protein structures.
 
+Broadly, one can classify descriptors based on the nature of
+structural information they require. Constitutional descriptors only
+require atom and bond labels and usually represent counts of different
+types of atoms or bonds. While very simplistic they can play a useful
+role in a variety of applications ranging from summaries of
+physicochemical properties to predictive modeling
+\cite{Bender:2005aa}.  
+
+
+Topological descriptors take into account connectivity along with atom
+and bond labels. These descriptors essentially consider the molecule
+as a labeled graph and characterize it using graph invariants. In
+addition to graph invariants, topological descriptors based on
+information theory such as entropy \cite{Dehmer:2009uq}. An advantage
+of these descriptors is that do not require any intensive
+pre-processing steps such as 3D coordinate generation and
+conformational analysis. In addition, many graph invariants can be
+rapidly computed for graphs corresponding to small molecule structures
+(even though they may be computationally intractable on much larger
+graphs). While this class of descriptors have been used extensively in
+predictive modeling applications [REFS], a key drawback is their lack
+of interpretability. Given the abstract nature of the many graph
+invariants and information theoretic descriptors, their use in
+predictive models makes it difficult to explain the model in simple
+physicochemical terms.
+
+
 \textbf{Fingerprints} A final class of descriptors are
 fingerprints. Traditionally, these descriptors are represented in the
 form of bit strings. Binary fingerprints can be divided into hashed
