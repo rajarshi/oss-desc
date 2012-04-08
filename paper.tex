@@ -171,17 +171,24 @@ rapid shape comparisons \cite{Grant:1999vn}. An alternative approach
 described by Ritchie et al \cite{Ritchie:1999kx} employed a spherical
 harmonic based representation of surfaces, that in contrast to the
 Gaussian approach allows one to generate characterizations of the
-surface and hence the shape at varying resolutions. In addition to
-functional representations of molecular shape, a number of simpler
-formulations have been defined. For example, the ``shape signature''
-approach described by Zauhar et al \cite{Zauhar:2003fk} is a novel
-application of a ray tracing method that generates a description of
-the molecular shape. Ballester et al \cite{Ballester:2007aa} described
-the Ultrafast Shape Recognition (USR) approach that characterized
-molecular shape in terms of the distribution of distances between the
-atoms and a set of pre-defined points. As a result, the calculation
+surface and hence the shape at varying resolutions. Another approach
+to multi-resolution shape representations is the use of $\alpha$
+shapes \cite{Edelsbrunner:1994aa}, which represent a parametrization
+of the convex hull derived from the molecular coordinates. This
+approach has been employed to characterize shape and volume
+\cite{Wilson:2009ys} though it is more computationally intensive than
+the methods mentioned previously. In addition to functional
+representations of molecular shape, a number of simpler formulations
+have been defined. For example, the ``shape signature'' approach
+described by Zauhar et al \cite{Zauhar:2003fk} is a novel application
+of a ray tracing method that generates a description of the molecular
+shape. Ballester et al \cite{Ballester:2007aa} described the Ultrafast
+Shape Recognition (USR) approach that characterized molecular shape in
+terms of the distribution of distances between the atoms and a set of
+pre-defined points. This procedure characterizes the shape in the form
+of a 12-D real valued fingerprint. As a result, the calculation
 procedure is extremely fast and once calculated shape similarities can
-be evaluated rapidly via a simple distance calculation. 
+be evaluated rapidly via a simple distance calculation.
 
 \textbf{Fingerprints} Traditionally, fingerprint descriptors are
 repreented in the form of bit strings. Binary fingerprints can be
@@ -213,6 +220,11 @@ usually employed and there have been studies that address the problem
 of identifying subsets of bits from a fingerprint that lead to optimal
 performance in predictive models (albeit, usually in a target-class
 specific manner) \cite{Xue:2004fk}.
+
+Finally, quantum mechanical calculations can also generated
+descriptors that can be applied to problems such as QSAR models
+(though of course the time complexity of QM derived descriptors do not
+make them amenable for large scale virtual screening applications).
 
 \textbf{Descriptors for inorganic compounds} Inorganic materials are
 sufficiently different from small molecules that traditional

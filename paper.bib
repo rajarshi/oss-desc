@@ -2,7 +2,7 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Rajarshi Guha at 2012-04-07 21:05:48 -0400 
+%% Created for Rajarshi Guha at 2012-04-07 21:54:15 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
@@ -10,6 +10,50 @@
 
 @string{jcim = {J.~Chem.~Inf.~Model.}}
 
+
+@article{Wilson:2009ys,
+	Abstract = {Despite considerable efforts, description of molecular shape is still largely an unresolved problem. Given the importance of molecular shape in the description of spatial interactions in crystals or ligand-target complexes, this is not a satisfying state. In the current work, we propose a novel application of alpha shapes to the description of the shapes of small molecules. Alpha shapes are parametrized generalizations of the convex hull. For a specific value of alpha, the alpha shape is the geometric dual of the space-filling model of a molecule, with the parameter alpha allowing description of shape in varying degrees of detail. To date, alpha shapes have been used to find macromolecular cavities and to estimate molecular surface areas and volumes. We developed a novel methodology for computing molecular shape characteristics from the alpha shape. In this work, we show that alpha-shape descriptors reveal aspects of molecular shape that are complementary to other shape descriptors and that accord well with chemists' intuition about shape. While our implementation of alpha-shape descriptors is not computationally trivial, we suggest that the additional shape characteristics they provide can be used to improve and complement shape-analysis methods in domains such as crystallography and ligand-target interactions. In this communication, we present a unique methodology for computing molecular shape characteristics from the alpha shape. We first describe details of the alpha-shape calculation, an outline of validation experiments performed, and a discussion of the advantages and challenges we found while implementing this approach. The results show that, relative to known shape calculations, this method provides a high degree of shape resolution with even small changes in atomic coordinates.},
+	Author = {Wilson, J. Anthony and Bender, Andreas and Kaya, Taner and Clemons, Paul A.},
+	Date-Added = {2012-04-07 21:52:43 -0400},
+	Date-Modified = {2012-04-07 21:53:10 -0400},
+	Doi = {10.1021/ci900190z},
+	Journal = {J.~Chem.~Inf.~Model.},
+	Journal-Full = {Journal of chemical information and modeling},
+	Mesh = {Linear Models; Models, Molecular; Molecular Conformation; Reproducibility of Results; Stereoisomerism; shape; descriptor; convex hull},
+	Month = {Oct},
+	Number = {10},
+	Pages = {2231--2241},
+	Pmc = {PMC3158582},
+	Pmid = {19775113},
+	Pst = {ppublish},
+	Title = {Alpha shapes applied to molecular shape characterization exhibit novel properties compared to established shape descriptors},
+	Volume = {49},
+	Year = {2009},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1021/ci900190z}}
+
+@article{Grant:1999vn,
+	Author = {Grant, J.A. and Gallardo, M.A. and Pickup, B.T.},
+	Date-Added = {2012-04-07 21:45:22 -0400},
+	Date-Modified = {2012-04-07 21:46:26 -0400},
+	Journal = {J.~Comp.~Chem.},
+	Keywords = {shape;descriptor;rocs;gaussian},
+	Number = {14},
+	Pages = {1653--1666},
+	Title = {A fast method of molecular shape comparison: {A} simple application of a {G}aussian description of molecular shape},
+	Volume = {17},
+	Year = {1999}}
+
+@article{Ritchie:1999kx,
+	Author = {Ritchie, D.W. and Kemp, G.J.L.},
+	Date-Added = {2012-04-07 21:38:41 -0400},
+	Date-Modified = {2012-04-07 21:39:40 -0400},
+	Journal = {J.~Comp.~Chem.},
+	Keywords = {shape; descriptor; harmonic; spherical},
+	Number = {4},
+	Pages = {385--395},
+	Title = {Fast computation, rotation, and comparison of low resolution spherical harmonic molecular surfaces},
+	Volume = {20},
+	Year = {1999}}
 
 @article{Mavridis:2007uq,
 	Abstract = {Searching chemical databases for possible drug leads is often one of the main activities conducted during the early stages of a drug development project. This article shows that spherical harmonic molecular shape representations provide a powerful way to search and cluster small-molecule databases rapidly and accurately. Our clustering results show that chemically meaningful clusters may be obtained using only low order spherical harmonic expansions. Our database search results show that using low order spherical harmonic shape-based correlation techniques could provide a practical and efficient way to search very large 3D molecular databases, hence leading to a useful new approach for high throughput 3D virtual screening. The approach described is currently being extended to allow the rapid search and comparison of arbitrary combinations of molecular surface properties.},
@@ -12739,9 +12783,9 @@ Results: We have applied our method to publicly available yeast, Helicobacter py
 @article{Edelsbrunner:1994aa,
 	Author = {Edelsbrunner, H. and Mucke, E.},
 	Date-Added = {2007-12-11 17:01:03 -0500},
-	Date-Modified = {2008-03-23 11:49:56 -0400},
+	Date-Modified = {2012-04-07 21:51:58 -0400},
 	Journal = {ACM Trans.~Graph.},
-	Keywords = {molecular surface; convex hull},
+	Keywords = {molecular surface; convex hull; descriptor},
 	Pages = {43--72},
 	Title = {Three Dimensional Alpha Shapes},
 	Volume = {13},
@@ -24880,7 +24924,7 @@ We describe the rcdk package that provides the R user with access to the CDK, a 
 		<key>group name</key>
 		<string>Exploring SAR</string>
 		<key>keys</key>
-		<string>Bajorath:2009ai,Korff:2006aa,Chen:2009hb</string>
+		<string>Chen:2009hb,Korff:2006aa,Bajorath:2009ai</string>
 	</dict>
 	<dict>
 		<key>group name</key>
