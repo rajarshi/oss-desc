@@ -163,18 +163,25 @@ correlation.
 
 While molecular surfaces are useful, molecular shape is a key factor
 in ligand-receptor interactions. A variety of descriptors have been
-devised to characterize molecular shape. For example, the ``shape
-signature'' approach described by Zauhar et al \cite{Zauhar:2003fk} is a novel application of a
-ray tracing method that generates a description of the molecular
-shape. Ballester et al \cite{Ballester:2007aa} described the Ultrafast
-Shape Recognition (USR) approach that characterized molecular shape in
-terms of the distribution of distances between the atoms and a set of
-pre-defined points. As a result, the calculation procedure is
-extremely fast and once calculated shape similarities can be evaluated
-rapidly via a simple distance calculation. 
-\textbf{
-  spherical harmonic shape descriptors, field based descriptors
-  [Cresset etc]}
+devised to characterize molecular shape. The use of overlapping atom
+centered Gaussians to represent molecular shape \cite{Grant:1995aa}
+represents a significant computational advantage over the traditional
+analytical approach of intersecting hard spheres, supporting extremely
+rapid shape comparisons \cite{Grant:1999vn}. An alternative approach
+described by Ritchie et al \cite{Ritchie:1999kx} employed a spherical
+harmonic based representation of surfaces, that in contrast to the
+Gaussian approach allows one to generate characterizations of the
+surface and hence the shape at varying resolutions. In addition to
+functional representations of molecular shape, a number of simpler
+formulations have been defined. For example, the ``shape signature''
+approach described by Zauhar et al \cite{Zauhar:2003fk} is a novel
+application of a ray tracing method that generates a description of
+the molecular shape. Ballester et al \cite{Ballester:2007aa} described
+the Ultrafast Shape Recognition (USR) approach that characterized
+molecular shape in terms of the distribution of distances between the
+atoms and a set of pre-defined points. As a result, the calculation
+procedure is extremely fast and once calculated shape similarities can
+be evaluated rapidly via a simple distance calculation. 
 
 \textbf{Fingerprints} Traditionally, fingerprint descriptors are
 repreented in the form of bit strings. Binary fingerprints can be
