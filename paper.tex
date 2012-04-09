@@ -357,7 +357,7 @@ experimentall observed values, rather than between themselves. Figure
 and ACD Labs for a set of 10,000 molecules taken from the logPstar
 dataset [REF].
 
-\subsection{Descriptor Versioning}
+\subsection{Descriptor Naming \& Versioning}
 \label{sec:descr-vers}
 
 As noted above, different implementations of the same descriptor can
@@ -372,6 +372,35 @@ report it along with the results. Though useful, it is not amenable to
 automation. In some cases, toolkits will provide an API call to
 retrieve the version information, which can then be associated with a
 descriptor calculation. 
+
+A topic closely related to versioning is descriptor naming. The
+preceding sections have discussed a categorization of descriptors and
+have used a number of commonly used names. When performing
+calculations in an automated manner, or employing remote services for
+descriptor calculations \cite{Dong:2007aa}, it is useful to be able to
+refer to descriptors via a standardized naming scheme. Currently the
+QSAR modeling community lacks such a scheme, though the Chemistry
+Developmen Kit (CDK), a Java library for cheminformatics
+\cite{Steinbeck:2006aa} does implement such a scheme. The ``descriptor
+specification'' approach defines a set of classes that include
+information of the implementation title, identifier and vendor. The
+identifier may or may not incude a version number. The actual details
+of the a descriptor are listed in a dictionary, along with an optional
+namespace. The dictionary entry is referenced by the descriptor
+specification and this design thus allows one to seamlessly work with
+multiple implementations of the same descriptor from different vendors
+and keep track of which version is employed throughout a calculation
+or workflow. In addition, the CDK provides a hierarchical annotation
+of descriptors, grouping them into different classes. Since this
+annotation is based on RDF \cite{Taylor:2006ab}, it allows one to go
+beyond simple groupings and perform reasoning on descriptors. A simple
+example is to identify functionally equivalent descriptors (such as
+simple transformations of a base descriptor - square and cube roots of
+the gravitational index is an example \cite{Wessel:1998ve}) in an
+automated fashion. While this infrastructure is currently only
+supported by the CDK, adoption of it (or some similar framework) would
+enable easier interoperability between descriptor implementations and
+enhance reproducibility.
 
 \section{Running Notes}
 \begin{itemize}
