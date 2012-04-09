@@ -274,7 +274,7 @@ properties.
 
 \textbf{Descriptors for inorganic compounds} Inorganic materials are
 sufficiently different from small molecules that traditional
-descriptors are not very useful. Recently, a number of descriptors for
+descriptors are not very useful. Recently, a number of descriptors for
 inorganic materials are very similar to constitutional descriptors -
 essentially counts of various crystal parameters such as acccessible
 surface areas and volumes
@@ -356,6 +356,22 @@ experimentall observed values, rather than between themselves. Figure
 \ref{fig:logp} compares computed log P values from the CDK, ChemAxon
 and ACD Labs for a set of 10,000 molecules taken from the logPstar
 dataset [REF].
+
+\subsection{Descriptor Versioning}
+\label{sec:descr-vers}
+
+As noted above, different implementations of the same descriptor can
+generate slightly different values depending on the underlying
+chemistry model, differences in reference values and so on. Even
+within the same software implementation, different versions of the
+same descriptor can generate different values. Thus to maintain
+reproducibility in sudies that employ molecular descriptors, some form
+of versioning is crucial. The simplest form of version is to manually
+note the version of the implementation used for the calculation and
+report it along with the results. Though useful, it is not amenable to
+automation. In some cases, toolkits will provide an API call to
+retrieve the version information, which can then be associated with a
+descriptor calculation. 
 
 \section{Running Notes}
 \begin{itemize}
