@@ -40,7 +40,17 @@ ${}^{\ddagger}$ Department of Bioinformatics - BiGCaT\\Maastricht University\\P.
 
 \maketitle
 \begin{abstract}
-Bar
+  Numerical characterization of molecular structure is a first step in
+  every computational analysis of molecular data. These numerical
+  representations, termed descriptors, come in many forms, ranging
+  from simple atom counts and invariants of the molecular graph to
+  distribution of properties such as charge across a molecular
+  surface. In this article we first present a broad categorization of
+  descriptors and then describe applications and toolkits that can be
+  employed to evaluate them. We highight a number of issues
+  surrounding molecular descriptor calculations such as versioning and
+  reproducibility and describe how some toolkits have attempted to
+  address these problems.
 \end{abstract}
 
 \section{Introduction}
@@ -303,7 +313,11 @@ be used in subsequent predictive models.
 A variety of descriptor implementations are available, with most
 cheminformatics toolkits providing implementations of a common set of
 descriptors and fingerprints. Table \ref{tab:impl} summarizes the
-descriptor classes implemented by several toolkits and applications. 
+descriptor classes implemented by several toolkits and
+applications. Note that that due to space limitations this is not a
+comprehensive list of implemented descriptors across different
+applications and the reader is referred to the documentation
+accompanying the software packages.
 
 While library calls for descriptor evaluation is the most flexible
 approach, it is not useful for non-programmers as well as users who
@@ -408,20 +422,16 @@ supported by the CDK, adoption of it (or some similar framework) would
 enable easier interoperability between descriptor implementations and
 enhance reproducibility.
 
+\section{Summary}
+\label{sec:summary}
+
+
 \section{Running Notes}
 \begin{itemize}
 \item Survey of descriptor implementations (OSS and non-OSS)
   \begin{itemize}
   \item MOE
-  \item DRAGON
-  \item CDK
-  \item RDKit
-  \item JChem
-  \item PipelinePilot
   \item OEChem/GraphTK
-  \item JOELib
-  \item CODESSA
-  \item Schrodinger stuff (Meastro?)
   \end{itemize}
 \item Go into more detail of OSS descriptor implementations
   \begin{itemize}
@@ -429,8 +439,6 @@ enhance reproducibility.
     library (CDKDescUI and batch mode)
   \item PaDEL
   \end{itemize}
-\item Compare OSS descs to commercial ones - point to the Pfizer/CDD
-  paper that compared MOE and CDK
 \end{itemize}
 \clearpage
 \newpage
@@ -440,6 +448,9 @@ enhance reproducibility.
 \newpage
 
 %% See http://code.google.com/p/rdkit/w/list for RDKit
+%% See
+%% http://www.ra.cs.uni-tuebingen.de/software/joelib/tutorial/descriptors/fingerprints.html for JOELib
+%% http://www.ra.cs.uni-tuebingen.de/software/joelib/tutorial/applications/descriptorcalculation.html for descs
 \ctable[caption={A summary of descriptor implementations covering Open
   Source and commercial cases.}, cap={}, label={tab:impl}]
 {llllp{0.3\linewidth}p{0.2\linewidth}}
@@ -448,12 +459,20 @@ enhance reproducibility.
 \FL
 Name & License & Toolkit & Application & Descriptors & Fingerprints
 \ML
-CDK & LGPL & Yes & \raggedright{CDKDescUI} &
+CDK & LGPL & Yes & Yes &
 \raggedright{Constitutional, topological, geometric, electronic and hybrid} &
   \raggedright{MACCS, PubChem, Kier \& Hall Estate keys. Hashed linear
   and circular} \NN
-JChem & Commercial & Yes & cxcalc & \raggedright{} & raggedright{} \NN
-JOELib & GPL & Yes & & \raggedright{} & \raggedright{} \NN
+CODESSA & Commercial & No & Yes & \raggedright{Constitutional,
+  topological, geometric, electronic, QM, thermodynamic} & \NN
+Dragon & Commercial & No & Yes & \raggedright{Extensive list
+of all classes of descriptor types and implements all those described
+in Ref.~\citen{Todeschini:2002aa}} &  \NN
+JChem & Commercial & Yes & Yes & \raggedright{Consititutional,
+  geometric, topological, electronic, hybrid} & \raggedright{Hashed,
+  circular, ECFP/FCFP} \NN
+JOELib & GPL & Yes & Yes & \raggedright{} &
+\raggedright{Keys from Xue et al\ \cite{Godden:2000qf}} \NN
 OpenBabel & GPL & Yes & & \raggedright{} & \raggedright{} \NN
 RDKit & New BSD & Yes & & \raggedright{Constitutional, topological,
   EState, partial charges and VSA combining EState, partial charges
