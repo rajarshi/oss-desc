@@ -328,13 +328,19 @@ Maestro (Schr\"{o}dinger, Inc.). Workflow tools are also a useful
 class of applications for descriptor generation and allow one to
 easily generate descriptors from multiple sources.
 
+Given the focus of this article on Open Source implementations, we
+have noted the availability in Table \ref{tab:impl}. While a number of
+implementations are not strictly Open Source according to OSI
+definitions, the fact that they provide free academic licenses does
+allow them to be used somewhat freely.
+
 \subsection{Comparing implementations}
 \label{sec:comp-impl}
 
 
 Given the multiple implementations of many descriptors, it is natural
 to compare their performance. As noted previously, it is desirable,
-but unlikely that implementations of the same descriptor using
+but unlikely, that implementations of the same descriptor using
 different cheminformatcs toolkits will be identical. Gupta et al
 employed SMARTS based descriptors from the CDK and MOE to develop
 decision tree models to predict human liver microsomal metabolic
@@ -347,15 +353,15 @@ different implementations.
 A number of physicochemical descriptors commonly employed in
 predictive modeling are themselves models of an experimental
 property. For example, log P can be experimentally measured and a
-number of algorithms have been developed to predict log P
-[REFs]. Given the utility of log P in drug discovery, a number of
-implementations are available. Given that this descriptor is a
-surrogate for an actual experimental property, it is reasonable to
-compare calculated log P values from different implementations to the
-experimentall observed values, rather than between themselves. Figure
-\ref{fig:logp} compares computed log P values from the CDK, ChemAxon
-and ACD Labs for a set of 10,000 molecules taken from the logPstar
-dataset [REF].
+number of algorithms have been developed to predict $\log P$
+\cite{Wang:1997aa,Wildman:1999aa}. Given the utility of log P in drug
+discovery, a number of implementations are available. Given that this
+descriptor is a surrogate for an actual experimental property, it is
+reasonable to compare calculated log P values from different
+implementations to the experimentally observed values, rather than
+between themselves. Figure \ref{fig:logp} compares computed log P
+values from the CDK, ChemAxon and ACD Labs for a set of 10,000
+molecules taken from the logPstar dataset [REF].
 
 \subsection{Descriptor Naming \& Versioning}
 \label{sec:descr-vers}
@@ -404,18 +410,6 @@ enhance reproducibility.
 
 \section{Running Notes}
 \begin{itemize}
-\item \textbf{Done} What are descriptors, why are they needed?
-\item Survey of descriptor types, focusing on nature of inputs,
-  complexity, interpretabilty 
-\item \textbf{Done} Talk about biological descriptors (see paper from Tropsha that
-  uses bioactivity data as descriptors)
-\item \textbf{Done} Discuss how fingerprints can also be used as descriptors
-\item Also mention descriptors for non-small molecule cases
-  \begin{itemize}
-  \item proteins
-  \item polymers \& mixtures
-  \item \textbf{Done} inorganics (maybe ask Maciej for pointers)
-  \end{itemize}
 \item Survey of descriptor implementations (OSS and non-OSS)
   \begin{itemize}
   \item MOE
@@ -444,6 +438,29 @@ enhance reproducibility.
 \bibliography{paper}
 
 \newpage
+
+%% See http://code.google.com/p/rdkit/w/list for RDKit
+\ctable[caption={A summary of descriptor implementations covering Open
+  Source and commercial cases.}, cap={}, label={tab:impl}]
+{llllp{0.3\linewidth}p{0.2\linewidth}}
+{}
+{
+\FL
+Name & License & Toolkit & Application & Descriptors & Fingerprints
+\ML
+CDK & LGPL & Yes & \raggedright{CDKDescUI} &
+\raggedright{Constitutional, topological, geometric, electronic and hybrid} &
+  \raggedright{MACCS, PubChem, Kier \& Hall Estate keys. Hashed linear
+  and circular} \NN
+JChem & Commercial & Yes & cxcalc & \raggedright{} & raggedright{} \NN
+JOELib & GPL & Yes & & \raggedright{} & \raggedright{} \NN
+OpenBabel & GPL & Yes & & \raggedright{} & \raggedright{} \NN
+RDKit & New BSD & Yes & & \raggedright{Constitutional, topological,
+  EState, partial charges and VSA combining EState, partial charges
+  and MR} & MACCS, hashed, atom pairs, topological
+torsions 
+\LL
+}
 
 \ctable[caption={A comparison of Topological Polar Surface Area values
 generated using the CDK and ACD Labs software, for 57,600 molecules
