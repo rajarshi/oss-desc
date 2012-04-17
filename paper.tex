@@ -143,7 +143,7 @@ rapidly computed for graphs corresponding to small molecule structures
 (even though they may be computationally intractable on much larger
 graphs). While this class of descriptors have been used extensively in
 predictive modeling applications
-\cite{Garcia-Domenech:2008aa,Randic:2001ac,Randic:2001ad,Besalu:2001aa,jcics:1995:35:272,Kier:1986ae},
+\cite{Garcia-Domenech:2008aa,Randic:2001ad,Besalu:2001aa},
 a key drawback is their lack of interpretability. Given the abstract
 nature of many graph invariants and information theoretic descriptors,
 their use in predictive models makes it difficult to explain the model
@@ -314,10 +314,57 @@ be used in subsequent predictive models.
 \section{What is a Useful Descriptor?}
 \label{sec:what-usef-descr}
 
-ideal characteristics fo a descriptor
-security
-interpretability
-modeling
+Clearly, one can calculate a huge variety of descriptors, many of
+which will be correlated with others. It is then critical to ask, what
+makes a descriptor useful? Fundamentally, a descriptor must correlate
+structural features with some physicochemical property and show
+minimal correlation with other descriptors. In addition, a generally
+useful descriptor will be applicable to a broad class of
+molecules. Furthermore, a descriptor should show minimal
+degeneracy. That is, the descriptor should generate different values
+for structurally different molecules, even if the structural
+differences are small. An example is the case of stereochemistry. Most
+2D descriptors that are not designed to take this into account will
+generate the same numerical values for all the stereoisomers of a
+given chiral molecule. We would consider such a descriptor to be
+degenerate. In addition to degeneracy, a descriptor should be
+continuous, in the sense, that small structural changes should lead to
+small changes in the value of the descriptor.
+
+The requirements listed here ensures that subsequent analyses
+involving descriptors are robust. But in addition to numerical
+robustness, it is important for amny scenarios that the descriptor
+have some form of physical interpretability.  For example, a model
+that employs descriptors to predict cytoxicity will be most useful if
+it is numerically accurate as well as providing insight into which
+structural features confer toxicity. In such a scenario, abstract
+descriptors do not allow us to provide a physical explanation of the
+models predictions. Another scenario is the ability to map descriptor
+values back to the structure for visualization purposes such as the
+``Glowing Molecule'' depictions of Segall et al
+\cite{Segall:2009fk}. Such visualizations are practical only when
+descriptor values can be related to structural features. Examples
+include surface based descriptors such as CPSA's as well as explicit
+structural descriptors such as paths, chains etc.
+
+However, there are certain scenarios where some of the above
+characteristics are \emph{undesirable}. One such scenario is in the
+safe exchange of structures, such that two parties can perform
+analyses on the structure-derived data, without having to know the
+structures explicitly. In such cases, the ability to go from a set of
+descriptor values back to a chemical structure should be minimized. It
+has not been conclusively proven that such a ``one-way'' descriptor
+can be defined. For example Masek et al \cite{Masek:2008aa} have shown
+that one can regenerate a target structure (or substructural features)
+or a set of closely related analogs given a combination of descriptors
+such as BCUTs. Tetko et al \cite{Tetko:2005fk} suggest an approach to
+prevent reverse engineering bu avoid the use of descriptors and
+instead sharing structures of related molecules, rather than the
+molecules of interest. One could also employ degenerate descriptors,
+which would represent a large family of molecules, such that the
+target molecule would be hidden. This is likely unreliable as it would
+be difficult to perform analyses (e.g., predtive models) with such
+descriptors.
 
 \section{Descriptor Implementations}
 \label{sec:descr-impl}
@@ -505,7 +552,7 @@ JChem & Commercial & Yes & Yes & \raggedright{Consititutional,
   circular, ECFP/FCFP} \NN
 JOELib & GPL & Yes & Yes & \raggedright{} &
 \raggedright{Keys from Xue et al\ \cite{Godden:2000qf}} \NN
-MOLCONN-Z & Commercial & No &  Yes & topological &  \NN
+Molconn-Z & Commercial & No &  Yes & topological &  \NN
 OpenBabel & GPL & Yes & & \raggedright{} & \raggedright{} \NN
 PowerMV \cite{Liu:2005ab} & GPL &  & Yes & \raggedright{constitutional, atom pairs,
   Burden numbers, pharmacophoric} & \raggedright{} \NN
