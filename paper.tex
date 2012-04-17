@@ -393,7 +393,14 @@ different cheminformatcs toolkits will be identical. Gupta et al
 employed SMARTS based descriptors from the CDK and MOE to develop
 decision tree models to predict human liver microsomal metabolic
 stability\cite{Gupta:2010uq}. Their results indicated very similar
-performance between the two implementations. 
+performance between the two implementations. In general, one would
+expect a high degree of correlation between different implementations
+of well-defined descriptors. Here ``well defined'' indicates that the
+underlying parametrization or chemistry model is completely specified,
+so that different implementations use them identically. For example,
+correct implementations of the TPSA descriptor are expected to
+correlate very well, and this is shown in Figure \ref{fig:tpsa} for
+the ACD Labs and CDK implementations.
 
 A number of physicochemical descriptors commonly employed in
 predictive modeling are themselves models of an experimental
@@ -406,7 +413,7 @@ reasonable to compare calculated log P values from different
 implementations to the experimentally observed values, rather than
 between themselves. Figure \ref{fig:logp} compares computed log P
 values from the CDK, ChemAxon and ACD Labs for a set of 10,000
-molecules taken from the logPstar dataset.
+molecules taken from the logPstar dataset. 
 
 \subsection{Descriptor Naming \& Versioning}
 \label{sec:descr-vers}
