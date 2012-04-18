@@ -73,11 +73,10 @@ generally require a numerical description of chemical structures. Such
 numerical forms range from a set of 3D coordinates (which coupled with
 appropiate atom types, is sufficient for methods such QM approaches
 and docking) to more abstract numerical descriptions derived from 2D
-or 3D representations which can be useful is statistical approaches.
-
-It is now possible to evaluate thousands of numerical descriptors of
-chemical structure. As will be discussed later, many of these
-descriptors are closely related - one can be substituted for
+or 3D representations which can be useful is statistical
+approaches. It is now possible to evaluate thousands of numerical
+descriptors of chemical structure. As will be discussed later, many of
+these descriptors are closely related - one can be substituted for
 another. The choice of descriptors is a well known problem and given a
 large collection of them, approaches to identify a suitable subset
 have been discussed extensively in the literature
@@ -314,8 +313,7 @@ be used in subsequent predictive models.
 \section{What is a Useful Descriptor?}
 \label{sec:what-usef-descr}
 
-Clearly, one can calculate a huge variety of descriptors, many of
-which will be correlated with others. It is then critical to ask, what
+Given that we can generate thousands of descriptors,  it is critical to ask, what
 makes a descriptor useful? Fundamentally, a descriptor must correlate
 structural features with some physicochemical property and show
 minimal correlation with other descriptors. In addition, a generally
@@ -399,10 +397,9 @@ applications that allow easy descriptor calculations. Examples include
 Bioclipse \cite{Spjuth:2007aa}, MOE (Chemical Computing Group) and
 Maestro (Schr\"{o}dinger, Inc.). Workflow tools are also a useful
 class of applications for descriptor generation and allow one to
-easily generate descriptors from multiple sources.
-
-Given the focus of this article on Open Source implementations, we
-have noted the availability in Table \ref{tab:impl}. While a number of
+easily generate descriptors from multiple sources. Given the focus of
+this article on Open Source implementations, we have noted the
+availability in Table \ref{tab:impl}. While a number of
 implementations are not strictly Open Source according to OSI
 definitions, the fact that they provide free academic licenses does
 allow them to be used somewhat freely.
@@ -447,7 +444,7 @@ but unlikely, that implementations of the same descriptor using
 different cheminformatcs toolkits will be identical. Gupta et al
 employed SMARTS based descriptors from the CDK and MOE to develop
 decision tree models to predict human liver microsomal metabolic
-stability\cite{Gupta:2010uq}. Their results indicated very similar
+stability \cite{Gupta:2010uq}. Their results indicated very similar
 performance between the two implementations. In general, one would
 expect a high degree of correlation between different implementations
 of well-defined descriptors. Here ``well defined'' indicates that the
@@ -467,8 +464,9 @@ descriptor is a surrogate for an actual experimental property, it is
 reasonable to compare calculated log P values from different
 implementations to the experimentally observed values, rather than
 between themselves. Figure \ref{fig:logp} compares computed log P
-values from the CDK, ChemAxon and ACD Labs for a set of 10,000
-molecules taken from the logPstar dataset. 
+values from the CDK (specifically, an implementation of the XlogP
+method), ChemAxon and ACD Labs for a set of 10,000 molecules taken
+from the logPstar dataset.
 
 \subsection{Descriptor Naming \& Versioning}
 \label{sec:descr-vers}
@@ -518,6 +516,57 @@ enhance reproducibility.
 \section{Summary}
 \label{sec:summary}
 
+Molecular descriptors play a fundamental role in cheminformatic and
+chemometric analyses and as we have described in this article it is
+possible to evaluate thousands of descriptors using a variety of
+software. Though the bulk of descriptors are well defined in the
+literature, multiple implementations of the same descriptor can yield
+different results. These differences arise from differences in the
+underlying chemistry models and reference data used by the
+implementations. As shown by Gupta et al \cite{Gupta:2010uq},
+the performance of predictive models developed using commercial or
+Open Source descriptor implementations is very similar. While
+different tools differ in the specific number and types of descriptors
+that they calculate, the fact many descriptors are correlated with
+others suggests that it does not matter too much which set of
+descriptors are used in an application. Of course, this cannot be a
+general rule - specific applications may require a specific set of
+descriptors. This is not to say that all descriptor tools exhibit
+similr performance. For example, it is clear from Figure \ref{fig:logp}
+that the ACD Labs implementation of log P performs significantly
+better than other implementations. Though this is not a completely
+rigorous comparison (the methods underlying the ACD Labs, CDK and
+ChemAxon implementations are different), it does highlight that
+certain implementations of a descriptor can fare better than others -
+especially those cases where the descriptor is based on a predictive
+model. 
+
+Given these challenges it is imperative that descriptor tools provide
+access to version information. This allows the user to provide an
+exact specification of how the descriptor was calculated. However, one
+aspect that has not been standardized across different implementations
+is the naming scheme. In other words, tools that evaluate the same
+descriptor may name them in a similar but not exactly identical
+manner. This makes automated comparisons and merging of descriptors
+from different sources problematic. To address the CDK has developed
+the concept of a ``descriptor specification'' which is associated with
+a descriptor value and includes information on the vendor, descriptor
+title and a reference to an entry in a descriptor dictionary that
+contains more details of the descriptor in RDF. While the extra
+descriptor metadata is currently used to implement a simple
+classification scheme, it is conceivable that in the future the
+specification approach could be adopted by multiple vendors, allowing
+for automated reasoning over descriptor implementations.
+
+In summary, there is no dearth of tools to generate molecular
+descriptors. Many of them are available under liberal Open Source
+licenses, though these implementations do not necessrily cover all the
+descriptors described to date. The tools range from toolkits (which
+implies that one must write a program to generate descriptors) to
+self-contaiend GUI or command line tools. Given the caveats regarding
+implementation specific differences, it is important to keep track of
+provenance information when calculating descriptors to ensure
+reproducibility.
 
 \clearpage
 \newpage
