@@ -47,7 +47,7 @@ ${}^{\ddagger}$ Department of Bioinformatics - BiGCaT\\Maastricht University\\P.
   distribution of properties, such as charge, across a molecular
   surface. In this article we first present a broad categorization of
   descriptors and then describe applications and toolkits that can be
-  employed to evaluate them. We highight a number of issues
+  employed to evaluate them. We highlight a number of issues
   surrounding molecular descriptor calculations such as versioning and
   reproducibility and describe how some toolkits have attempted to
   address these problems.
@@ -71,7 +71,7 @@ computational techniques to be directly applied to them.
 Methods that aim to predict chemical and biological properties
 generally require a numerical description of chemical structures. Such
 numerical forms range from a set of 3D coordinates (which coupled with
-appropiate atom types, is sufficient for methods such QM approaches
+appropriate atom types, is sufficient for methods such QM approaches
 and docking) to more abstract numerical descriptions derived from 2D
 or 3D representations which can be useful is statistical
 approaches. It is now possible to evaluate thousands of numerical
@@ -271,7 +271,7 @@ molecular systems.
 
 \textbf{Descriptors for polymeric systems} Polymeric systems represent
 a challenge for descriptor development. There have been reports that
-employed tradtional small-molecule descriptors
+employed traditional small-molecule descriptors
 \cite{Mattioni:2002dq,Katritzky:1998cr} that consider the polymer in
 terms of the individual monomers. A number of approaches have been
 described that includes both deterministic, geometry derived
@@ -289,7 +289,7 @@ properties.
 sufficiently different from small molecules that traditional
 descriptors are not very useful. Recently, a number of descriptors for
 inorganic materials are very similar to constitutional descriptors -
-essentially counts of various crystal parameters such as acccessible
+essentially counts of various crystal parameters such as accessible
 surface areas and volumes
 \cite{Willems:2012zr,Haranczyk:2010ys,Mackay:1984ve}. Other
 descriptors characterize the periodic voids of porous materials via
@@ -300,7 +300,7 @@ so far are derived from some form of chemical structure, an
 alternative approach is to employ observed biological activities of a
 molecule as descriptors of that molecule.  This approach was taken by
 Sedykh et al \cite{Sedykh:2011fk} who hypothesized that dose response
-data points from high throughput dose-reponse assays could be employed
+data points from high throughput dose-response assays could be employed
 as biological descriptors. They observed that when such descriptors
 were combined with traditional chemical structure descriptors, the
 predictive performance of models developed using the combined set was
@@ -331,7 +331,7 @@ small changes in the value of the descriptor.
 
 The requirements listed here ensures that subsequent analyses
 involving descriptors are robust. But in addition to numerical
-robustness, it is important for amny scenarios that the descriptor
+robustness, it is important for many scenarios that the descriptor
 have some form of physical interpretability.  For example, a model
 that employs descriptors to predict cytoxicity will be most useful if
 it is numerically accurate as well as providing insight into which
@@ -355,7 +355,7 @@ has not been conclusively proven that such a ``one-way'' descriptor
 can be defined. For example Masek et al \cite{Masek:2008aa} have shown
 that one can regenerate a target structure (or substructural features)
 or a set of closely related analogs given a combination of descriptors
-such as BCUTs. Tetko et al \cite{Tetko:2005fk} suggest an approach to
+such as BCUTs. Tetko \textit{et al.} \cite{Tetko:2005fk} suggest an approach to
 prevent reverse engineering bu avoid the use of descriptors and
 instead sharing structures of related molecules, rather than the
 molecules of interest. One could also employ degenerate descriptors,
@@ -431,7 +431,7 @@ implementations are not threadsafe, making them unsuitable for
 parallelization. This is a drawback since many of the descriptors can
 be slow. For example, the $\chi$ descriptors \cite{Kier:1976aa} are
 implemented using SMARTS matching to identify the various paths and
-chains described by Kier et al, rather than explicitly walking the
+chains described by Kier \textit{et al.}, rather than explicitly walking the
 molecular graph.
 
 \subsection{Comparing implementations}
@@ -491,11 +491,11 @@ calculations in an automated manner, or employing remote services for
 descriptor calculations \cite{Dong:2007aa}, it is useful to be able to
 refer to descriptors via a standardized naming scheme. Currently the
 QSAR modeling community lacks such a scheme, though the Chemistry
-Developmen Kit (CDK), a Java library for cheminformatics
+Development Kit (CDK), a Java library for cheminformatics
 \cite{Steinbeck:2006aa} does implement such a scheme. The ``descriptor
 specification'' approach defines a set of classes that include
 information of the implementation title, identifier and vendor. The
-identifier may or may not incude a version number. The actual details
+identifier may or may not include a version number. The actual details
 of the a descriptor are listed in a dictionary, along with an optional
 namespace. The dictionary entry is referenced by the descriptor
 specification and this design thus allows one to seamlessly work with
@@ -532,7 +532,7 @@ others suggests that it does not matter too much which set of
 descriptors are used in an application. Of course, this cannot be a
 general rule - specific applications may require a specific set of
 descriptors. This is not to say that all descriptor tools exhibit
-similr performance. For example, it is clear from Figure \ref{fig:logp}
+similar performance. For example, it is clear from Figure \ref{fig:logp}
 that the ACD Labs implementation of log P performs significantly
 better than other implementations. Though this is not a completely
 rigorous comparison (the methods underlying the ACD Labs, CDK and
@@ -560,10 +560,10 @@ for automated reasoning over descriptor implementations.
 
 In summary, there is no dearth of tools to generate molecular
 descriptors. Many of them are available under liberal Open Source
-licenses, though these implementations do not necessrily cover all the
+licenses, though these implementations do not necessarily cover all the
 descriptors described to date. The tools range from toolkits (which
 implies that one must write a program to generate descriptors) to
-self-contaiend GUI or command line tools. Given the caveats regarding
+self-contained GUI or command line tools. Given the caveats regarding
 implementation specific differences, it is important to keep track of
 provenance information when calculating descriptors to ensure
 reproducibility.
