@@ -413,8 +413,8 @@ each individual descriptor may calculate multiple values. For example,
 the CPSA descriptor evaluates 30 individual values. Thus for a given
 molecule it is possible to generate approximately 300 descriptor
 values. Every descriptor implements an interface allowing them to
-return values in a uniform manner, viz., via a
-\texttt{DescriptorValue} object. This class can represents the result
+return values in a uniform manner, viz., via a \texttt{DescriptorValue}
+object (see Figure~\ref{fig:cdkapi}). This class can represents the result
 of a descriptor calculation and includes both the descriptor values
 (via a \texttt{IDescriptorResult} object) as well as meta-data on the
 descriptor itself via a \texttt{DescriptorSpecification} object (see
@@ -621,6 +621,12 @@ torsions
   \includegraphics[width=\linewidth]{vol-moe-cdk}
 }
 
+\ctable[caption={UML diagram of the CDK descriptor API in version 1.4.},cap={},label={fig:cdkapi},botcap,figure]
+{c}
+{}
+{
+  \includegraphics[width=\linewidth]{iDescriptor.pdf}
+}
 
 \ctable[caption={A comparison of Topological Polar Surface Area values
 generated using the CDK and ACD Labs software, for 57,857 molecules
