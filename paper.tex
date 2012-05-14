@@ -64,37 +64,39 @@ description of a the molecular structure. Of course, there are many
 ways to ``describe'' a molecule. A common approach is to describe the
 connectivity, taking into account the types of atoms and bonds. In
 other words, explicit representations of chemical structure such as
-SMILES, SD files and so on. While these descriptions are vital to
+SMILES, MDL/Symyx SD files and so on. While these descriptions are vital to
 modern chemical information systems, they do not necessarily allow
 computational techniques to be directly applied to them.
 
 Methods that aim to predict chemical and biological properties
 generally require a numerical description of chemical structures. Such
 numerical forms range from a set of 3D coordinates (which coupled with
-appropriate atom types, is sufficient for methods such QM approaches
+appropriate atom types, is sufficient for methods such quantum mechenical (QM) approaches
 and docking) to more abstract numerical descriptions derived from 2D
 or 3D representations which can be useful is statistical
 approaches. It is now possible to evaluate thousands of numerical
 descriptors of chemical structure. As will be discussed later, many of
-these descriptors are closely related - one can be substituted for
-another. The choice of descriptors is a well known problem and given a
+these descriptors are closely related or capture the same information,
+causing that one can be substituted for another. The choice of descriptors is a well-known problem and given a
 large collection of them, approaches to identify a suitable subset
-have been discussed extensively in the literature
-\cite{Miller:2002aa,Kohavi:1997gf}.
+have been discussed extensively in the literature~\cite{Miller:2002aa,Kohavi:1997gf}.
 
 In addition to there being many possible descriptors defined in the
 literature, there are also multiple implementations of a give
 descriptor. These implementations are available in the form of
 libraries (which require one to write a program to use them) or
-complete applications (GUI or command line). As a result, not only
+complete applications (graphical user interface (GUI) or command line). As a result, not only
 must one choose one or more descriptors that are relevant to the
 problem at hand, but one must be concerned about how they
 are calculated and whether such a calculation can be reproduced across
 different implementations of those descriptors. It is easy to
 understand \emph{why} two implementations of the same descriptor can
-lead to different results - the primary reason being the chemistry
+lead to different results - the primary reasons being that the chemistry
 model that underlies the framework or toolkit used to implement the
-descriptor. For example, a descriptor that calculates the number of
+descriptor is different, and that used data such as isotopic masses
+are different.
+
+For example, a descriptor that calculates the number of
 aromatic atoms may be implemented using two toolkits with differing
 aromaticity models, and hence it is possible that the values generated
 by the two implementations will differ. Other sources of differences
@@ -103,27 +105,28 @@ and reference data values (such as atomic radii, electronegativity
 values) that are employed during descriptor calculation. While most
 implementations will employ the same data sources for standard
 concepts (e.g., atomic weights), slight differences in these types of
-input data can lead to differences in the final descriptor value. As a
+input data can lead to differences in the final descriptor value~\cite{Guha:2006ac}. As a
 result, in most cases, two implementations of a descriptor do not
 usually give the exact same value, though they are usually quite
 similar. Explicitly explaining the differences may or may not be
 possible (it is usually more difficult in the cases of commercial
-implementations for which source code is not available).
+implementations for which source code is not available)~\cite{Spjuth2010}.
 
 \section{A Categorization of Descriptors}
 \label{sec:categ-descr}
 
 We have noted that a molecular structure can be characterized using a
-numebr of numerical descriptors. In this section we describe a
+number of numerical descriptors. In this section we describe a
 categorization of descriptors. Admittedly, the grouping is somewhat
 arbitrary but serves as a useful guide. In addition, the
 categorization also considers the nature of the chemical structure
 being considered - some descriptors are only useful when applied to
 small molecules, whereas other descriptors are defined specifically
 for polymers or protein structures.
-
 Broadly, one can classify descriptors based on the nature of
-structural information they require. Constitutional descriptors only
+structural information they require.
+
+Constitutional descriptors only
 require atom and bond labels and usually represent counts of different
 types of atoms or bonds. While very simplistic they can play a useful
 role in a variety of applications ranging from summaries of
@@ -170,14 +173,21 @@ surfce. Note that surface descriptor calculations based on analytical
 such as the Topological Polar Surface Area (TPSA) \cite{Ertl:2000aa}
 and VSA descriptors \cite{Labute:2008aa} that are based on
 precalculated surface area values derived from a list of functional
-groups.  Molecular volume is also a useful physical descriptor and
-both analytical \cite{Eisenhaber:1995qf} and approximate methods are
-available to evaluate it. A very fast method is the VABC approach
-\cite{Zhao:2003fk} that is based on group contributions. It has been
+groups.
+
+It is important to note that there is a difference between the information
+a descriptor captures and how it is calculated. The above categories are
+based on input requirements. This gives rise to situations where
+geometrical molecular volume property can be described by geometrical descriptors,
+e.g. using an analytical approaches ~\cite{Eisenhaber:1995qf}, and
+with approximate, constitutional descriptors, such as the very fast algorithm
+use by the VABC approach~\cite{Zhao:2003fk} which is based on group contributions.
+The latter descriptor has been
 implemented in the CDK and correlates well with other approximations
 to the molecular volume (Figure \ref{fig:molvol}).
 
-Molecular shape is a key factor in ligand-receptor interactions and is
+Another important class of geometrical descriptors are those that
+describe molecular shape. This property is a key factor in ligand-receptor interactions and is
 an important approach to virtual screening. A variety of descriptors
 have been devised to characterize molecular shape. The use of
 overlapping atom centered Gaussians to represent molecular shape
@@ -211,8 +221,8 @@ indices based on the molecular topology have also been described
 analogous to the VSA descriptors) but do not directly represent the
 molecular shape and instead infer it from topological connectivity.
 
-Finally, quantum mechanical calculations can also generated
-descriptors that can be applied to problems such as QSAR models
+The last category consists of QM descriptors. These
+descriptors can also be applied to problems such as QSAR models
 (though of course the time complexity of QM derived descriptors do not
 make them amenable for large scale virtual screening
 applications). These descriptors can be evaluated at various levels of
@@ -235,8 +245,11 @@ molecule in terms of an autocorrelation function. These descriptors
 may be based on topological or geometric distances and can be combined
 with arbitrary molecular properties \cite{Moreau:1980aa,Broto:1984aa}.
 
-\textbf{Fingerprints} Traditionally, fingerprint descriptors are
-represented in the form of bit strings. Binary fingerprints can be
+\subsection{Fingerprints}
+
+Besides the numerical descriptors outlined so far, another useful
+approach are those of fingerprints. Traditionally, fingerprint descriptors are
+represented in the form of bit strings. These binary fingerprints can be
 divided into hashed fingerprints, where substructures (such as paths
 of length $n$) are converted to a string representation and then
 hashed into a randomly selected bit positions, or keyed fingerprints,
@@ -266,6 +279,8 @@ of identifying subsets of bits from a fingerprint that lead to optimal
 performance in predictive models (albeit, usually in a target-class
 specific manner) \cite{Xue:2004fk}.
 
+\subsection{Describing other chemistry}
+
 We next consider descriptors that are designed for specific classes of
 molecular systems.
 
@@ -293,7 +308,14 @@ essentially counts of various crystal parameters such as accessible
 surface areas and volumes
 \cite{Willems:2012zr,Haranczyk:2010ys,Mackay:1984ve}. Other
 descriptors characterize the periodic voids of porous materials via
-tesselation methods \cite{Anurova:2009ly,Carr:2009kx}
+tesselation methods \cite{Anurova:2009ly,Carr:2009kx}.
+
+\textbf{Crystal structures} Other methods developed for crystal structures
+have been developed too, for example, using a radial distribution
+functions~\cite{Willighagen2005}, which capture the packing of organic
+crystal structures. Such approaches have been used to cluster
+crystal structures~\cite{Wehrens2006} and compare properties~\cite{Willighagen2007}.
+% FIXME: add recent work
 
 \textbf{Bioactivity as a descriptor} While the descriptors mentioned
 so far are derived from some form of chemical structure, an
@@ -322,7 +344,7 @@ molecules. Furthermore, a descriptor should show minimal
 degeneracy. That is, the descriptor should generate different values
 for structurally different molecules, even if the structural
 differences are small. An example is the case of stereochemistry. Most
-2D descriptors that are not designed to take this into account will
+constitutional and topological descriptors that are not designed to take this into account will
 generate the same numerical values for all the stereoisomers of a
 given chiral molecule. We would consider such a descriptor to be
 degenerate. In addition to degeneracy, a descriptor should be
@@ -356,7 +378,7 @@ can be defined. For example Masek et al \cite{Masek:2008aa} have shown
 that one can regenerate a target structure (or substructural features)
 or a set of closely related analogs given a combination of descriptors
 such as BCUTs. Tetko \textit{et al.} \cite{Tetko:2005fk} suggest an approach to
-prevent reverse engineering bu avoid the use of descriptors and
+prevent reverse engineering but avoid the use of descriptors and
 instead sharing structures of related molecules, rather than the
 molecules of interest. One could also employ degenerate descriptors,
 which would represent a large family of molecules, such that the
