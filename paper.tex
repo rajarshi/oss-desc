@@ -332,6 +332,15 @@ approach can be taken using the PASS methodology
 predict the PASS profile from the chemical structure, which can then
 be used in subsequent predictive models.
 
+\textbf{Atom and bond descriptors} It should also be noted that various
+toolkits also calculate descriptors for chemical entities like atoms and
+bonds. These descriptors include simple element property descriptors,
+but also geometrical descriptor, such as radial distribution functions
+that describe the chemical environment of those atoms. These,
+for example, have been used to predict proton shift in 
+nuclear magnetic resonance~\cite{AiresDeSousa2002}. Similarly, bond
+descriptors can be used to predict bond properties.
+
 \section{What is a Useful Descriptor?}
 \label{sec:what-usef-descr}
 
@@ -391,9 +400,9 @@ descriptors.
 
 A variety of descriptor implementations are available, with most
 cheminformatics toolkits providing implementations of a common set of
-descriptors and fingerprints. Table \ref{tab:impl} summarizes the
+descriptors and fingerprints. Table~\ref{tab:impl} summarizes the
 descriptor classes implemented by several toolkits and
-applications. Note that that due to space limitations this is not a
+applications. Note that due to space limitations this is not a
 comprehensive list of implemented descriptors across different
 applications and the reader is referred to the documentation
 accompanying the software packages.
@@ -404,7 +413,7 @@ simply need a descriptor matrix for modeling or searching. As a
 result, GUI or command line wrappers around descriptor APIs enable
 easier usage. The CDKDescUI application
 (\url{http://rguha.net/code/java/cdkdesc.html}) is a Java Swing
-application that exposes the CDK descriptor and fingerprint API's. It
+application that exposes the Chemistry Development Kit (CDK) descriptor and fingerprint API's. It
 allows the users to specify a SMILES or SD file and evaluate a
 selected set of descriptors or fingerprints and export them to a text
 file. The application also has a command line mode that can be run in
@@ -419,7 +428,7 @@ applications that allow easy descriptor calculations. Examples include
 Bioclipse \cite{Spjuth:2007aa}, MOE (Chemical Computing Group) and
 Maestro (Schr\"{o}dinger, Inc.). Workflow tools are also a useful
 class of applications for descriptor generation and allow one to
-easily generate descriptors from multiple sources. Given the focus of
+easily generate descriptors from multiple sources~\cite{Truszkowski2011}. Given the focus of
 this article on Open Source implementations, we have noted the
 availability in Table \ref{tab:impl}. While a number of
 implementations are not strictly Open Source according to OSI
@@ -430,11 +439,13 @@ Due to our experience with the CDK project we provide a brief overview
 of the architecture of the descriptor calculations implemented by the
 CDK. First, the toolkit explicitly differentiates between atom, bond
 and whole molecule descriptors. There are a total of 30, 6 and 51
-descriptors for atoms, bonds and molecules respectively. Note that
-each individual descriptor may calculate multiple values. For example,
-the CPSA descriptor evaluates 30 individual values. Thus for a given
+descriptor algorithms for atoms, bonds and molecules respectively. Note that
+each individual descriptor algorithm may calculate multiple descriptors. For example,
+the CPSA descriptor evaluates 30 individual descriptor values. Thus for a given
 molecule it is possible to generate approximately 300 descriptor
-values. Every descriptor implements an interface allowing them to
+values.
+
+Every descriptor implements an interface allowing them to
 return values in a uniform manner, viz., via a \texttt{DescriptorValue}
 object (see Figure~\ref{fig:cdkapi}). This class can represents the result
 of a descriptor calculation and includes both the descriptor values
@@ -498,7 +509,7 @@ generate slightly different values depending on the underlying
 chemistry model, differences in reference values and so on. Even
 within the same software implementation, different versions of the
 same descriptor can generate different values. Thus to maintain
-reproducibility in sudies that employ molecular descriptors, some form
+reproducibility in studies that employ molecular descriptors, some form
 of versioning is crucial. The simplest form of version is to manually
 note the version of the implementation used for the calculation and
 report it along with the results. Though useful, it is not amenable to
@@ -512,8 +523,7 @@ have used a number of commonly used names. When performing
 calculations in an automated manner, or employing remote services for
 descriptor calculations \cite{Dong:2007aa}, it is useful to be able to
 refer to descriptors via a standardized naming scheme. Currently the
-QSAR modeling community lacks such a scheme, though the Chemistry
-Development Kit (CDK), a Java library for cheminformatics
+QSAR modeling community lacks such a scheme, though the CDK, a Java library for cheminformatics
 \cite{Steinbeck:2006aa} does implement such a scheme. The ``descriptor
 specification'' approach defines a set of classes that include
 information of the implementation title, identifier and vendor. The
@@ -533,7 +543,13 @@ the gravitational index is an example \cite{Wessel:1998ve}) in an
 automated fashion. While this infrastructure is currently only
 supported by the CDK, adoption of it (or some similar framework) would
 enable easier interoperability between descriptor implementations and
-enhance reproducibility.
+enhance reproducibility. The framework is, however, actively used by
+software using the CDK descriptors, such as
+Bioclipse~\cite{Spjuth2010} and Ambit~\cite{Jelizakova2011}. Moreover,
+the ideas have been adopted by the CHEMINF ontology for
+cheminformatics~\cite{Hastings2011}, which is used by the CHESS
+framework which also uses the CDK for descriptor calculations~\cite{Chepelev2011b}.
+
 
 \section{Summary}
 \label{sec:summary}
