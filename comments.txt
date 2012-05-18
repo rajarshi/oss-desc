@@ -1,0 +1,11 @@
+
+- focus CDK descriptor, Open descriptors, ?
+- add AMBIT2 and Padel as implementing the CDK descriptor API
+- list JOELib as tool that did provenance
+- list QSAR-ML (XML) and CHEMINF (RDF) as frameworks to serialize provenance
+- information content (Shannon, variance)
+- clearer focus on underlying data model (3D coordinates, chemical graph, QM)
+- models as descriptors (XLogP)
+
+
+

@@ -423,12 +423,14 @@ additional descriptors such as the extended topochemical atom
 descriptors \cite{Roy:2004uq}, McGowan Volume \cite{Zhao:2003kx}, and
 the Klekota \& Roth substructure counts \cite{Klekota:2008vn}.
 
+
+
 In addition to libraries and their wrappers there are various GUI
 applications that allow easy descriptor calculations. Examples include
-Bioclipse \cite{Spjuth:2007aa}, MOE (Chemical Computing Group) and
+Bioclipse \cite{Spjuth:2007aa} (see Figure~\ref{fig:tools}), MOE (Chemical Computing Group) and
 Maestro (Schr\"{o}dinger, Inc.). Workflow tools are also a useful
 class of applications for descriptor generation and allow one to
-easily generate descriptors from multiple sources~\cite{Truszkowski2011}. Given the focus of
+easily generate descriptors from multiple sources~\cite{Truszkowski2011} (see Figure~\ref{fig:tools}). Given the focus of
 this article on Open Source implementations, we have noted the
 availability in Table \ref{tab:impl}. While a number of
 implementations are not strictly Open Source according to OSI
@@ -509,7 +511,7 @@ generate slightly different values depending on the underlying
 chemistry model, differences in reference values and so on. Even
 within the same software implementation, different versions of the
 same descriptor can generate different values. Thus to maintain
-reproducibility in studies that employ molecular descriptors, some form
+reproducibility in studies that employ moleculad2a28dc0c273a4e060c2fea503adc36er descriptors, some form
 of versioning is crucial. The simplest form of version is to manually
 note the version of the implementation used for the calculation and
 report it along with the results. Though useful, it is not amenable to
@@ -657,6 +659,19 @@ torsions
 {}
 {
   \includegraphics[width=\linewidth]{vol-moe-cdk}
+}
+
+\ctable[caption={Four tools to calculate descriptors: Bioclipse (top left), which allows selecting descriptor
+implementations from various independent tools, CDK-Taverna (top right), which is an extension to Taverna
+to calculate descriptors with the CDK, Ambit2 (bottom left), which implements the OpenTox API providing
+a REST-based API for descriptor calculation and wraps various descriptor calculation tools,
+and ....},cap={},label={fig:tools},botcap,figure]
+{c}
+{}
+{
+  \includegraphics[width=0.48\linewidth]{bioclipse}
+  \includegraphics[width=0.48\linewidth]{cdktaverna} \\
+  \includegraphics[width=0.48\linewidth]{ambitOnline}
 }
 
 \ctable[caption={UML diagram of the CDK descriptor API in version 1.4.},cap={},label={fig:cdkapi},botcap,figure]
