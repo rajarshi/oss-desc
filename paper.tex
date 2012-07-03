@@ -41,7 +41,7 @@ ${}^{\ddagger}$ Department of Bioinformatics - BiGCaT\\Maastricht University\\P.
 \maketitle
 \begin{abstract}
   Numerical characterization of molecular structure is a first step in
-  every computational analysis of molecular data. These numerical
+  many computational analysis of chemical structure data. These numerical
   representations, termed descriptors, come in many forms, ranging
   from simple atom counts and invariants of the molecular graph to
   distribution of properties, such as charge, across a molecular
@@ -56,11 +56,11 @@ ${}^{\ddagger}$ Department of Bioinformatics - BiGCaT\\Maastricht University\\P.
 \section{Introduction}
 
 Computational methods play an important role in many chemical
-disciplines ranging from drug discovery to materials science. While
-there are a variety of techniques that differ in terms of
+disciplines ranging from drug discovery to materials science.
+There are a plethora of techniques that differ in terms of
 computational complexity, time requirements and so on. However the
 common requirement underlying all these methods is a formal
-description of a the molecular structure. Of course, there are many
+description of a the molecular structure. There are many
 ways to ``describe'' a molecule. A common approach is to describe the
 connectivity, taking into account the types of atoms and bonds. In
 other words, explicit representations of chemical structure such as
@@ -71,103 +71,102 @@ computational techniques to be directly applied to them.
 Methods that aim to predict chemical and biological properties
 generally require a numerical description of chemical structures. Such
 numerical forms range from a set of 3D coordinates (which coupled with
-appropriate atom types, is sufficient for methods such quantum mechenical (QM) approaches
-and docking) to more abstract numerical descriptions derived from 2D
-or 3D representations which can be useful is statistical
-approaches. It is now possible to evaluate thousands of numerical
-descriptors of chemical structure. As will be discussed later, many of
-these descriptors are closely related or capture the same information,
-causing that one can be substituted for another. The choice of descriptors is a well-known problem and given a
-large collection of them, approaches to identify a suitable subset
-have been discussed extensively in the literature~\cite{Miller:2002aa,Kohavi:1997gf}.
+appropriate atom types, is sufficient for methods such as quantum
+mechanical (QM) approaches and docking to more abstract numerical
+descriptions derived from 2D or 3D representations which can be useful
+in statistical approaches. It is now possible to evaluate thousands of
+numerical descriptors of chemical structure. As will be discussed
+later, many of these descriptors are closely related or capture the
+same information, allowing one to be substituted for another. The
+choice of descriptors is a well-known problem and given a large
+collection of them, approaches to identify a suitable subset have been
+discussed extensively in the
+literature~\cite{Miller:2002aa,Kohavi:1997gf}.
 
 In addition to there being many possible descriptors defined in the
 literature, there are also multiple implementations of a give
 descriptor. These implementations are available in the form of
 libraries (which require one to write a program to use them) or
-complete applications (graphical user interface (GUI) or command line). As a result, not only
-must one choose one or more descriptors that are relevant to the
-problem at hand, but one must be concerned about how they
-are calculated and whether such a calculation can be reproduced across
-different implementations of those descriptors. It is easy to
-understand \emph{why} two implementations of the same descriptor can
-lead to different results - the primary reasons being that the chemistry
-model that underlies the framework or toolkit used to implement the
-descriptor is different, and that used data such as isotopic masses
-are different.
-
-For example, a descriptor that calculates the number of
-aromatic atoms may be implemented using two toolkits with differing
-aromaticity models, and hence it is possible that the values generated
-by the two implementations will differ. Other sources of differences
-include parameters that may be involved in the descriptor calculation
-and reference data values (such as atomic radii, electronegativity
-values) that are employed during descriptor calculation. While most
-implementations will employ the same data sources for standard
-concepts (e.g., atomic weights), slight differences in these types of
-input data can lead to differences in the final descriptor value~\cite{Guha:2006ac}. As a
-result, in most cases, two implementations of a descriptor do not
-usually give the exact same value, though they are usually quite
-similar. Explicitly explaining the differences may or may not be
-possible (it is usually more difficult in the cases of commercial
-implementations for which source code is not available)~\cite{Spjuth2010}.
+complete applications (graphical user interface (GUI) or command
+line). As a result, not only must one choose one or more descriptors
+that are relevant to the problem at hand, but one must be concerned
+about how they are calculated and whether such a calculation can be
+reproduced across different implementations of those descriptors. It
+is easy to understand \emph{why} two implementations of the same
+descriptor can lead to different results - the primary reasons being
+that the chemistry model that underlies the framework or toolkit used
+to implement the descriptor is different. For example, a descriptor
+that calculates the number of aromatic atoms may be implemented using
+two toolkits with differing aromaticity models, and hence it is
+possible that the values generated by the two implementations will
+differ. Other sources of differences include parameters that may be
+involved in the descriptor calculation and reference data values (such
+as atomic radii, electronegativity values) that are employed during
+descriptor calculation. While most implementations will employ the
+same data sources for standard concepts (e.g., atomic weights), slight
+differences in these types of input data can lead to differences in
+the final descriptor value~\cite{Guha:2006ac}. As a result, in most
+cases, two implementations of a descriptor do not usually give the
+exact same value, though they are usually quite similar. Explicitly
+explaining the differences may or may not be possible (it is usually
+more difficult in the cases of commercial implementations for which
+source code is not available)~\cite{Spjuth2010}.
 
 \section{A Categorization of Descriptors}
 \label{sec:categ-descr}
 
-We have noted that a molecular structure can be characterized using a
-number of numerical descriptors. In this section we describe a
+We have noted that a molecular structure can be characterized using
+many numerical descriptors. In this section we describe a
 categorization of descriptors. Admittedly, the grouping is somewhat
 arbitrary but serves as a useful guide. In addition, the
-categorization also considers the nature of the chemical structure
-being considered - some descriptors are only useful when applied to
-small molecules, whereas other descriptors are defined specifically
-for polymers or protein structures.
-Broadly, one can classify descriptors based on the nature of
-structural information they require.
+categorization also takes into account the nature of the chemical
+structure being considered - some descriptors are only useful when
+applied to small molecules, whereas other descriptors are defined
+specifically for polymers or protein structures.  Broadly, one can
+classify descriptors based on the nature of structural information
+they require.
 
-Constitutional descriptors only
-require atom and bond labels and usually represent counts of different
-types of atoms or bonds. While very simplistic they can play a useful
-role in a variety of applications ranging from summaries of
-physicochemical properties to predictive modeling
-\cite{Bender:2005aa}.  
+Constitutional descriptors only require atom and bond labels and
+usually represent counts of different types of atoms or bonds. While
+very simplistic they can play a useful role in a variety of
+applications ranging from summaries of physicochemical properties to
+predictive modeling \cite{Bender:2005aa}.
 
 Topological descriptors take into account connectivity along with atom
-and bond labels. These descriptors essentially consider the molecule
-as a labeled graph and characterize it using graph invariants. In
-addition to graph invariants, topological descriptors based on
-information theory such as entropy \cite{Dehmer:2009uq}. An advantage
-of these descriptors is that do not require any intensive
-pre-processing steps such as 3D coordinate generation and
-conformational analysis. In addition, many graph invariants can be
-rapidly computed for graphs corresponding to small molecule structures
-(even though they may be computationally intractable on much larger
-graphs). While this class of descriptors have been used extensively in
-predictive modeling applications
-\cite{Garcia-Domenech:2008aa,Randic:2001ad,Besalu:2001aa},
-a key drawback is their lack of interpretability. Given the abstract
-nature of many graph invariants and information theoretic descriptors,
-their use in predictive models makes it difficult to explain the model
-in simple physicochemical terms, though various attempts have been  
-made at interpretations \cite{Todeschini:1975dq,Stanton:2003aa}.
+and bond labels. They consider the molecule as a labeled graph and
+characterize it using graph invariants. In addition to graph
+invariants, topological descriptors based on information theory such
+as entropy have also been defined\cite{Dehmer:2009uq}. An advantage of
+these descriptors is that do not require any intensive pre-processing
+steps such as 3D coordinate generation and conformational analysis. In
+addition, many graph invariants can be rapidly computed for graphs
+corresponding to small molecule structures (even though they may be
+computationally intractable on much larger graphs). While this class
+of descriptors have been used extensively in predictive modeling
+applications
+\cite{Garcia-Domenech:2008aa,Randic:2001ad,Besalu:2001aa}, a key
+drawback is their lack of interpretability. The abstract nature of
+many graph invariants and information theoretic descriptors, their use
+in predictive models makes it difficult to explain the model in simple
+physicochemical terms, though various attempts have been made at
+interpretations \cite{Todeschini:1975dq,Stanton:2003aa}.
 
 Geometric descriptors require a 3D conformation as input and therefore
-are not as fast as topological descriptors which do not require the 3D
-coordinate generation step. Nearly all geometric descriptors work on a
-single conformation and for cases where multiple conformation must be
-considered, an averaging procedure is usually employed. Examples of
-these descriptors include the gravitational index
-\cite{Katritzky:1996ly} and moment of inertia descriptors. However,
-geometric descriptors encompass many aspects of a molecular
-structure. For example, a number of geometric descriptors characterize
-the molecular surface. The simplest such example is the surface area
-descriptor (and the corresponding volume descriptor). A simple
-extension of such a descriptor is to characterize distributions of a
-physicochemical property over the molecular surface such as the
-Charged Partial Surface Area descriptors \cite{Stanton:1990aa} that
-characterize the partial charge distribution over the molecular
-surfce. Note that surface descriptor calculations based on analytical
+the computations are not as fast as topological descriptors which do
+not require the 3D coordinate generation step. Nearly all geometric
+descriptors work on a single conformation and for cases where multiple
+conformation must be considered, an averaging procedure is usually
+employed. Examples of these descriptors include the gravitational
+index \cite{Katritzky:1996ly} and moment of inertia descriptors.
+Geometric descriptors encompass many aspects of a molecular
+structure. For example, a number of them characterize the molecular
+surface. The simplest such example is the surface area descriptor (and
+the corresponding volume descriptor). A simple extension of such a
+descriptor is to characterize distributions of a physicochemical
+property over the molecular surface such as the Charged Partial
+Surface Area descriptors \cite{Stanton:1990aa} that characterize the
+partial charge distribution over the molecular surfce. Note that
+surface descriptor calculations based on analytical
 \cite{Connolly:1983aa} or tesselation algorithms
 \cite{Eisenhaber:1995qf} can be slow and that parametrized methods
 such as the Topological Polar Surface Area (TPSA) \cite{Ertl:2000aa}
@@ -175,16 +174,17 @@ and VSA descriptors \cite{Labute:2008aa} that are based on
 precalculated surface area values derived from a list of functional
 groups.
 
-It is important to note that there is a difference between the information
-a descriptor captures and how it is calculated. The above categories are
-based on input requirements. This gives rise to situations where
-geometrical molecular volume property can be described by geometrical descriptors,
-e.g. using an analytical approaches ~\cite{Eisenhaber:1995qf}, and
-with approximate, constitutional descriptors, such as the very fast algorithm
-use by the VABC approach~\cite{Zhao:2003fk} which is based on group contributions.
-The latter descriptor has been
-implemented in the CDK and correlates well with other approximations
-to the molecular volume (Figure \ref{fig:molvol}).
+It is important to note that there is a difference between the
+information a descriptor captures and how it is calculated. The above
+categories are based on input requirements. This gives rise to
+situations where the molecular volume property can be
+described by geometrical descriptors, e.g. using an analytical
+approaches ~\cite{Eisenhaber:1995qf}, and with approximate,
+constitutional descriptors, such as the very fast algorithm use by the
+VABC approach~\cite{Zhao:2003fk} which is based on group
+contributions.  The latter descriptor has been implemented in the CDK
+and correlates well with other approximations to the molecular volume
+(Figure \ref{fig:molvol}).
 
 Another important class of geometrical descriptors are those that
 describe molecular shape. This property is a key factor in ligand-receptor interactions and is
@@ -279,13 +279,13 @@ of identifying subsets of bits from a fingerprint that lead to optimal
 performance in predictive models (albeit, usually in a target-class
 specific manner) \cite{Xue:2004fk}.
 
-\subsection{Describing other chemistry}
+\subsection{Describing other chemistries}
 
 We next consider descriptors that are designed for specific classes of
 molecular systems.
 
-\textbf{Descriptors for polymeric systems} Polymeric systems represent
-a challenge for descriptor development. There have been reports that
+\textbf{Descriptors for polymeric systems} These systems represent a
+challenge for descriptor development. There have been reports that
 employed traditional small-molecule descriptors
 \cite{Mattioni:2002dq,Katritzky:1998cr} that consider the polymer in
 terms of the individual monomers. A number of approaches have been
@@ -310,12 +310,12 @@ surface areas and volumes
 descriptors characterize the periodic voids of porous materials via
 tesselation methods \cite{Anurova:2009ly,Carr:2009kx}.
 
-\textbf{Crystal structures} Other methods developed for crystal structures
-have been developed too, for example, using a radial distribution
+Other methods developed for crystal structures have been developed
+too, for example, using a radial distribution
 functions~\cite{Willighagen2005}, which capture the packing of organic
-crystal structures. Such approaches have been used to cluster
-crystal structures~\cite{Wehrens2006} and compare properties~\cite{Willighagen2007}.
-% FIXME: add recent work
+crystal structures. Such approaches have been used to cluster crystal
+structures~\cite{Wehrens2006} and compare
+properties~\cite{Willighagen2007}.
 
 \textbf{Bioactivity as a descriptor} While the descriptors mentioned
 so far are derived from some form of chemical structure, an
@@ -392,7 +392,7 @@ instead sharing structures of related molecules, rather than the
 molecules of interest. One could also employ degenerate descriptors,
 which would represent a large family of molecules, such that the
 target molecule would be hidden. This is likely unreliable as it would
-be difficult to perform analyses (e.g., predtive models) with such
+be difficult to perform analyses (e.g., predictive models) with such
 descriptors.
 
 \section{Descriptor Implementations}
@@ -517,13 +517,13 @@ generate slightly different values depending on the underlying
 chemistry model, differences in reference values and so on. Even
 within the same software implementation, different versions of the
 same descriptor can generate different values. Thus to maintain
-reproducibility in studies that employ moleculad2a28dc0c273a4e060c2fea503adc36er descriptors, some form
-of versioning is crucial. The simplest form of version is to manually
-note the version of the implementation used for the calculation and
-report it along with the results. Though useful, it is not amenable to
-automation. In some cases, toolkits will provide an API call to
-retrieve the version information, which can then be associated with a
-descriptor calculation. 
+reproducibility in studies that employ molecular descriptors, some
+form of versioning is crucial. The simplest form of version is to
+manually note the version of the implementation used for the
+calculation and report it along with the results. Though useful, it is
+not amenable to automation. In some cases, toolkits will provide an
+API call to retrieve the version information, which can then be
+associated with a descriptor calculation.
 
 A topic closely related to versioning is descriptor naming. The
 preceding sections have discussed a categorization of descriptors and
