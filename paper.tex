@@ -165,10 +165,10 @@ the corresponding volume descriptor). A simple extension of such a
 descriptor is to characterize distributions of a physicochemical
 property over the molecular surface such as the Charged Partial
 Surface Area descriptors \cite{Stanton:1990aa} that characterize the
-partial charge distribution over the molecular surfce. Note that
+partial charge distribution over the molecular surface. Note that
 surface descriptor calculations based on analytical
-\cite{Connolly:1983aa} or tesselation algorithms
-\cite{Eisenhaber:1995qf} can be slow and that parametrized methods
+\cite{Connolly:1983aa} or tessellation algorithms
+\cite{Eisenhaber:1995qf} can be slow and that parameterized methods
 such as the Topological Polar Surface Area (TPSA) \cite{Ertl:2000aa}
 and VSA descriptors \cite{Labute:2008aa} that are based on
 precalculated surface area values derived from a list of functional
@@ -200,7 +200,7 @@ in contrast to the Gaussian approach allows one to generate
 characterizations of the surface and hence the shape at varying
 resolutions. Another approach to multi-resolution shape
 representations is the use of $\alpha$ shapes
-\cite{Edelsbrunner:1994aa}, which represent a parametrization of the
+\cite{Edelsbrunner:1994aa}, which represent a parameterization of the
 convex hull derived from the molecular coordinates. This approach has
 been employed to characterize shape and volume \cite{Wilson:2009ys}
 though it is more computationally intensive than the methods mentioned
@@ -308,7 +308,7 @@ essentially counts of various crystal parameters such as accessible
 surface areas and volumes
 \cite{Willems:2012zr,Haranczyk:2010ys,Mackay:1984ve}. Other
 descriptors characterize the periodic voids of porous materials via
-tesselation methods \cite{Anurova:2009ly,Carr:2009kx}.
+tessellation methods \cite{Anurova:2009ly,Carr:2009kx}.
 
 Other methods developed for crystal structures have been developed
 too, for example, using a radial distribution
@@ -364,7 +364,7 @@ The requirements listed here ensures that subsequent analyses
 involving descriptors are robust. But in addition to numerical
 robustness, it is important for many scenarios that the descriptor
 have some form of physical interpretability.  For example, a model
-that employs descriptors to predict cytoxicity will be most useful if
+that employs descriptors to predict cytotoxicity will be most useful if
 it is numerically accurate as well as providing insight into which
 structural features confer toxicity. In such a scenario, abstract
 descriptors do not allow us to provide a physical explanation of the
@@ -482,7 +482,7 @@ molecular graph.
 Given the multiple implementations of many descriptors, it is natural
 to compare their performance. As noted previously, it is desirable,
 but unlikely, that implementations of the same descriptor using
-different cheminformatcs toolkits will be identical. Gupta et al
+different cheminformatics toolkits will be identical. Gupta et al
 employed SMARTS based descriptors from the CDK and MOE to develop
 decision tree models to predict human liver microsomal metabolic
 stability \cite{Gupta:2010uq}. Their results indicated very similar
@@ -689,7 +689,7 @@ tools.},cap={},label={fig:tools},botcap,figure]
 
 \ctable[caption={A comparison of Topological Polar Surface Area values
 generated using the CDK and ACD Labs software, for 57,857 molecules
-taken from Pubchem AID 1996.},cap={},label={fig:tpsa},botcap,figure]
+taken from PubChem AID 1996.},cap={},label={fig:tpsa},botcap,figure]
 {c}
 {}
 {
