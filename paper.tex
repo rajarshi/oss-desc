@@ -434,9 +434,12 @@ web technologies for descriptor calculation~\cite{Chepelev2011b}.
 In addition to libraries and their wrappers there are various GUI
 applications that allow easy descriptor calculations. Examples include
 Bioclipse \cite{Spjuth:2007aa} (see Figure~\ref{fig:tools}), MOE (Chemical Computing Group) and
-Maestro (Schr\"{o}dinger, Inc.). Workflow tools are also a useful
+Maestro (Schr\"{o}dinger, Inc.) as standalone tools, but also
+as a plugin to Microsoft Excel, called LICSS~\cite{Lawson2011}.
+Workflow tools are also a useful
 class of applications for descriptor generation and allow one to
-easily generate descriptors from multiple sources~\cite{Truszkowski2011} (see Figure~\ref{fig:tools}). Given the focus of
+easily generate descriptors from multiple sources~\cite{Truszkowski2011}
+(see Figure~\ref{fig:tools}). Given the focus of
 this article on Open Source implementations, we have noted the
 availability in Table \ref{tab:impl}. While a number of
 implementations are not strictly Open Source according to OSI
@@ -667,17 +670,20 @@ torsions
   \includegraphics[width=\linewidth]{vol-moe-cdk}
 }
 
-\ctable[caption={Three tools to calculate descriptors: Bioclipse (top left), which allows selecting descriptor
+\ctable[caption={Four tools to calculate descriptors: Bioclipse (top left), which allows selecting descriptor
 implementations from various independent tools, CDK-Taverna (top right), which is an extension to Taverna
-to calculate descriptors with the CDK, Ambit2 (bottom), which implements the OpenTox API providing
+to calculate descriptors with the CDK, Ambit2 (bottom left), which implements the OpenTox API providing
 a REST-based API for descriptor calculation and wraps various descriptor calculation
-tools.},cap={},label={fig:tools},botcap,figure]
+tools. The bottom right screenshot shows the Microsoft Excel plugin LICSS
+that uses the CDK for 2D diagrams and descriptor calculation. This screenshot is provided by Kevin
+Lawson, Syngenta, UK, and reproduced with permission.},cap={},label={fig:tools},botcap,figure]
 {c}
 {}
 {
   \includegraphics[width=0.48\linewidth]{bioclipse}
   \includegraphics[width=0.48\linewidth]{cdktaverna} \\
   \includegraphics[width=0.48\linewidth]{ambitOnline}
+  \includegraphics[width=0.48\linewidth]{DescriptorTest}
 }
 
 \ctable[caption={UML diagram of the CDK descriptor API in version 1.4.},cap={},label={fig:cdkapi},botcap,figure]
