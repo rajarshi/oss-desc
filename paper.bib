@@ -2,13 +2,201 @@
 %% http://bibdesk.sourceforge.net/
 
 
-%% Created for Rajarshi Guha at 2012-04-17 22:53:54 -0400 
+%% Created for Rajarshi Guha at 2012-07-20 22:20:46 -0400 
 
 
 %% Saved with string encoding Unicode (UTF-8) 
 
 
 @string{jcim = {J.~Chem.~Inf.~Model.}}
+
+@article{Spjuth2010,
+abstract = {ABSTRACT: BACKGROUND: QSAR is a widely used method to relate chemical structures to responses or properties based on experimental observations. Much effo
+rt has been made to evaluate and validate the statistical modeling in QSAR, but these analyses treat the dataset as fixed. An overlooked but highly important issue i
+s the validation of the setup of the dataset, which comprises addition of chemical structures as well as selection of descriptors and software implementations prior 
+to calculations. This process is hampered by the lack of standards and exchange formats in the field, making it virtually impossible to reproduce and validate analys
+es and drastically constrain collaborations and re-use of data. RESULTS: We present a step towards standardizing QSAR analyses by defining interoperable and reproduc
+ible QSAR datasets, consisting of an open XML format (QSAR-ML) which builds on an open and extensible descriptor ontology. The ontology provides an extensible way of
+ uniquely defining descriptors for use in QSAR experiments, and the exchange format supports multiple versioned implementations of these descriptors. Hence, a datase
+t described by QSAR-ML makes its setup completely reproducible. We also provide a reference implementation as a set of plugins for Bioclipse which simplifies setup o
+f QSAR datasets, and allows for exporting in QSAR-ML as well as old-fashioned CSV formats. The implementation facilitates addition of new descriptor implementations 
+from locally installed software and remote Web services; the latter is demonstrated with REST and XMPP Web services. CONCLUSIONS: Standardized QSAR datasets open up 
+new ways to store, query, and exchange data for subsequent analyses. QSAR-ML supports completely reproducible creation of datasets, solving the problems of defining 
+which software components were used and their versions, and the descriptor ontology eliminates confusions regarding descriptors by defining them crisply. This makes 
+it easy to join, extend, combine datasets and hence work collectively, but also allows for analyzing the effect descriptors have on the statistical model's performan
+ce. The presented Bioclipse plugins equip scientists with graphical tools that make QSAR-ML easily accessible for the community.},
+author = {Spjuth, Ola and Willighagen, Egon L and Guha, Rajarshi and Eklund, Martin and Wikberg, Jarl Es E},
+doi = {10.1186/1758-2946-2-5},
+file = {:home/egonw/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Spjuth et al. - 2009 - Bioclipse 2 a scriptable integration platform for the life sci
+ences.pdf:pdf},
+issn = {17582946},
+journal = {Journal of Cheminformatics},
+keywords = {cheminformatics,data,interoperability,papers,qsar,xml},
+mendeley-tags = {cheminformatics,data,interoperability,papers,qsar,xml},
+month = jun,
+number = {1},
+pmid = {20591161},
+title = {{Towards interoperable and reproducible QSAR analyses: Exchange of datasets.}},
+type = {Journal article},
+volume = {2},
+year = {2010}
+}
+
+@article{Willighagen2005,
+abstract = {A new method for assessing the similarity of crystal structures is described. A similarity measure is important in classification and clustering problems
+ in which the crystal structures are the source of information. Classification is particularly important for the understanding of properties of crystals, while clust
+ering can be used as a data reduction step in polymorph prediction. The method described uses a radial distribution function that combines atomic coordinates with pa
+rtial atomic charges. The descriptor is validated using experimental data from a classification study of clathrate structures of cephalosporins and data from a polym
+orph prediction run. In both cases, excellent results were obtained.},
+author = {Willighagen, E L and Wehrens, R and Verwer, P and de Gelder, R and Buydens, L M C},
+doi = {10.1107/S0108768104028344},
+issn = {0108-7681},
+journal = {Acta crystallographica. Section B, Structural science},
+keywords = {cheminformatics,chemistry,chemometrics,crystal,papers,structures},
+mendeley-tags = {cheminformatics,chemistry,chemometrics,crystal,papers,structures},
+month = mar,
+number = {Pt 1},
+pages = {29--36},
+pmid = {15659855},
+publisher = {International Union of Crystallography},
+title = {{Method for the computational comparison of crystal structures.}},
+type = {Journal article},
+url = {http://www.ncbi.nlm.nih.gov/pubmed/15659855},
+volume = {61},
+year = {2005}
+}
+@article{Willighagen2007,
+abstract = {Supervised self-organizing maps (SOMs) provide a new method to explore large numbers of crystal structures and to visualize structureproperty relationshi
+ps. Examples show how powder diffraction patterns and one or more structural properties determine the positions of crystal structures on the supervised SOMs, and sho
+w that the maps allow the classification of structures, prediction of properties, and subset selection in polymorph prediction.},
+author = {Willighagen, E. L. and Wehrens, R. and Melssen, W. and de Gelder, R. and Buydens, L. M. C.},
+doi = {10.1021/cg060872y},
+issn = {1528-7483},
+journal = {Crystal Growth \& Design},
+keywords = {cheminformatics,chemistry,chemometrics,cito--iscitedby--8146859,crystallography,kohonen,papers,som,supervised},
+mendeley-tags = {cheminformatics,chemistry,chemometrics,cito--iscitedby--8146859,crystallography,kohonen,papers,som,supervised},
+month = sep,
+number = {9},
+pages = {1738--1745},
+title = {{Supervised Self-Organizing Maps in Crystal Property and Structure Prediction}},
+type = {Journal article},
+url = {http://pubs.acs.org/doi/abs/10.1021/cg060872y http://www.citeulike.org/user/egonw/article/5656657},
+volume = {7},
+year = {2007}
+}
+@article{Wehrens2006,
+author = {Wehrens, R and Willighagen, EL},
+journal = {RNews},
+keywords = {crystallography,database,kohonen,learning,machine,map,papers,r,som,statistics},
+mendeley-tags = {crystallography,database,kohonen,learning,machine,map,papers,r,som,statistics},
+number = {3},
+pages = {24 -- 28},
+title = {{Mapping databases of X-ray powder patterns}},
+type = {Journal article},
+url = {http://www.citeulike.org/user/egonw/article/5645202},
+volume = {6},
+year = {2006}
+}
+
+@article{AiresDeSousa2002,
+    abstract = {doi: 10.1021/ac010737m Counterpropagation neural networks were applied to the fast prediction of {1H} {NMR} chemical shifts of {CHn} groups in organic compounds. The training set consisted of 744 examples of protons that were represented by physicochemical, topological, and geometric descriptors. The selection of descriptors was performed by genetic algorithms, and the models obtained were compared to those containing all the descriptors. The best models yielded very good predictions for an independent prediction set of 259 cases (mean absolute error for whole set, 0.25 ppm; mean absolute error for 90\% of cases, 0.19 ppm) and for application cases consisting of four natural products recently described. Some stereochemical effects could be correctly predicted. A useful feature of the system resides in its ability to be retrained with a specific data set of compounds if improved predictions for related structures are required.},
+    author = {Aires-De-Sousa, Joao and Hemmer, Markus C. and Gasteiger, Johann},
+    citeulike-article-id = {4030139},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1021/ac010737m},
+    citeulike-linkout-1 = {http://pubs.acs.org/doi/abs/10.1021/ac010737m},
+    day = {1},
+    doi = {10.1021/ac010737m},
+    journal = {Analytical Chemistry},
+    month = jan,
+    number = {1},
+    pages = {80--90},
+    posted-at = {2009-02-10 15:37:40},
+    priority = {2},
+    title = {Prediction of {1H} {NMR} Chemical Shifts Using Neural Networks},
+    url = {http://dx.doi.org/10.1021/ac010737m},
+    volume = {74},
+    year = {2002}
+}
+
+@article{Truszkowski2011,
+    abstract = {
+                {ABSTRACT}:
+                The computational processing and analysis of small molecules is at heart of cheminformatics and structural bioinformatics and their application in e.g. metabolomics or drug discovery. Pipelining or workflow tools allow for the Lego™-like, graphical assembly of {I/O} modules and algorithms into a complex workflow which can be easily deployed, modified and tested without the hassle of implementing it into a monolithic application. The {CDK}-Taverna project aims at building a free open-source cheminformatics pipelining solution through combination of different open-source projects such as Taverna, the Chemistry Development Kit ({CDK}) or the Waikato Environment for Knowledge Analysis ({WEKA}). A first integrated version 1.0 of {CDK}-Taverna was recently released to the public.
+                The {CDK}-Taverna project was migrated to the most up-to-date versions of its foundational software libraries with a complete re-engineering of its worker's architecture (version 2.0). 64-bit computing and multi-core usage by paralleled threads are now supported to allow for fast in-memory processing and analysis of large sets of molecules. Earlier deficiencies like workarounds for iterative data reading are removed. The combinatorial chemistry related reaction enumeration features are considerably enhanced. Additional functionality for calculating a natural product likeness score for small molecules is implemented to identify possible drug candidates. Finally the data analysis capabilities are extended with new workers that provide access to the open-source {WEKA} library for clustering and machine learning as well as training and test set partitioning. The new features are outlined with usage scenarios.
+                {CDK}-Taverna 2.0 as an open-source cheminformatics workflow solution matured to become a freely available and increasingly powerful tool for the biosciences. The combination of the new {CDK}-Taverna worker family with the already available workflows developed by a lively Taverna community and published on myexperiment.org enables molecular scientists to quickly calculate, process and analyse molecular data as typically found in e.g. today's systems biology scenarios.
+            },
+    author = {Truszkowski, Andreas and Jayaseelan, Kalai Vanii V. and Neumann, Stefan and Willighagen, Egon L. and Zielesny, Achim and Steinbeck, Christoph},
+    citeulike-article-id = {10124844},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-54},
+    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3292505/},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/22166170},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=22166170},
+    day = {13},
+    doi = {10.1186/1758-2946-3-54},
+    issn = {1758-2946},
+    journal = {Journal of cheminformatics},
+    keywords = {cheminformatics, taverna},
+    month = dec,
+    number = {1},
+    pages = {54+},
+    pmcid = {PMC3292505},
+    pmid = {22166170},
+    posted-at = {2011-12-13 15:39:20},
+    priority = {2},
+    title = {New developments on the cheminformatics open workflow environment {CDK}-Taverna.},
+    url = {http://dx.doi.org/10.1186/1758-2946-3-54},
+    volume = {3},
+    year = {2011}
+}
+
+@article{Jelizakova2011,
+    abstract = {The {AMBIT} web services package is one of the several existing independent implementations of the {OpenTox} Application Programming Interface and is built according to the principles of the Representational State Transfer ({REST}) architecture. The Open Source Predictive Toxicology Framework, developed by the partners in the {EC} {FP7} {OpenTox} project, aims at providing a unified access to toxicity data and predictive models, as well as validation procedures. This is achieved by i) an information model, based on a common {OWL}-{DL} ontology ii) links to related ontologies; iii) data and algorithms, available through a standardized {REST} web services interface, where every compound, data set or predictive method has a unique web address, used to retrieve its Resource Description Framework ({RDF}) representation, or initiate the associated {calculations.The} {AMBIT} web services package has been developed as an extension of {AMBIT} modules, adding the ability to create (Quantitative) {Structure-Activity} Relationship ({QSAR}) models and providing an {OpenTox} {API} compliant interface. The representation of data and processing resources in {W3C} Resource Description Framework facilitates integrating the resources as Linked Data. By uploading datasets with chemical structures and arbitrary set of properties, they become automatically available online in several formats. The services provide unified interfaces to several descriptor calculation, machine learning and similarity searching algorithms, as well as to applicability domain and toxicity prediction models. All Toxtree modules for predicting the toxicological hazard of chemical compounds are also integrated within this package. The complexity and diversity of the processing is reduced to the simple paradigm "read data from a web address, perform processing, write to a web address". The online service allows to easily run predictions, without installing any software, as well to share online datasets and models. The downloadable web application allows researchers to setup an arbitrary number of service instances for specific purposes and at suitable locations. These services could be used as a distributed framework for processing of resource-intensive tasks and data sharing or in a fully independent way, according to the specific needs. The advantage of exposing the functionality via the {OpenTox} {API} is seamless interoperability, not only within a single web application, but also in a network of distributed services. Last, but not least, the services provide a basis for building web mashups, end user applications with friendly {GUIs}, as well as embedding the functionalities in existing workflow systems.},
+    author = {Jeliazkova, Nina and Jeliazkov, Vedrin},
+    citeulike-article-id = {9306014},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-18},
+    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21575202},
+    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21575202},
+    doi = {10.1186/1758-2946-3-18},
+    issn = {1758-2946},
+    journal = {Journal of Cheminformatics},
+    keywords = {acsrdf2010, cdk--usespackage--fingerprint, cdk--usespackage--qsar, cdk--usespackage--renderer, cdk--usespackage--smiles, opentox, rdf, rest, webservices},
+    number = {1},
+    pages = {18+},
+    pmid = {21575202},
+    posted-at = {2011-05-17 15:14:16},
+    priority = {2},
+    title = {{AMBIT} {RESTful} web services: an implementation of the {OpenTox} application programming interface},
+    url = {http://dx.doi.org/10.1186/1758-2946-3-18},
+    volume = {3},
+    year = {2011}
+}
+
+@article{Hastings2011,
+    abstract = {Cheminformatics is the application of informatics techniques to solve chemical problems in silico. There are many areas in biology where cheminformatics plays an important role in computational research, including metabolism, proteomics, and systems biology. One critical aspect in the application of cheminformatics in these fields is the accurate exchange of data, which is increasingly accomplished through the use of ontologies. Ontologies are formal representations of objects and their properties using a logic-based ontology language. Many such ontologies are currently being developed to represent objects across all the domains of science. Ontologies enable the definition, classification, and support for querying objects in a particular domain, enabling intelligent computer applications to be built which support the work of scientists both within the domain of interest and across interrelated neighbouring domains. Modern chemical research relies on computational techniques to filter and organise data to maximise research productivity. The objects which are manipulated in these algorithms and procedures, as well as the algorithms and procedures themselves, enjoy a kind of virtual life within computers. We will call these information entities. Here, we describe our work in developing an ontology of chemical information entities, with a primary focus on data-driven research and the integration of calculated properties (descriptors) of chemical entities within a semantic web context. Our ontology distinguishes algorithmic, or procedural information from declarative, or factual information, and renders of particular importance the annotation of provenance to calculated data. The Chemical Information Ontology is being developed as an open collaborative project. More details, together with a downloadable {OWL} file, are available at http://code.google.com/p/semanticchemist​ry/ (license: {CC}-{BY}-{SA}).},
+    author = {Hastings, Janna and Chepelev, Leonid and Willighagen, Egon and Adams, Nico and Steinbeck, Christoph and Dumontier, Michel},
+    citeulike-article-id = {9849008},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1371/journal.pone.0025513},
+    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3184996/},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/21991315},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=21991315},
+    day = {3},
+    doi = {10.1371/journal.pone.0025513},
+    issn = {1932-6203},
+    journal = {PLoS ONE},
+    keywords = {cdk--usespackage--qsar, cheminformatics, ontology},
+    month = oct,
+    number = {10},
+    pages = {e25513+},
+    pmcid = {PMC3184996},
+    pmid = {21991315},
+    posted-at = {2011-10-04 09:19:07},
+    priority = {2},
+    publisher = {Public Library of Science},
+    title = {The Chemical Information Ontology: Provenance and Disambiguation for Chemical Data on the Biological Semantic Web},
+    url = {http://dx.doi.org/10.1371/journal.pone.0025513},
+    volume = {6},
+    year = {2011}
+}
 
 @article{Lawson2011,
     abstract = {{BACKGROUND}:Representations of chemical datasets in spreadsheet format are important for ready data assimilation and manipulation. In addition to the normal spreadsheet facilities, chemical spreadsheets need to have visualisable chemical structures and data searchable by chemical as well as textual queries. Many such chemical spreadsheet tools are available, some operating in the familiar Microsoft Excel environment. However, within this group, the performance of Excel is often compromised, particularly in terms of the number of compounds which can usefully be stored on a {sheet.SUMMARY}:{LICSS} is a lightweight chemical spreadsheet within Microsoft Excel for Windows. {LICSS} stores structures solely as Smiles strings. Chemical operations are carried out by calling Java code modules which use the {CDK}, {JChemPaint} and {OPSIN} libraries to provide cheminformatics functionality. Compounds in sheets or charts may be visualised (individually or en masse), and sheets may be searched by substructure or similarity. All the molecular descriptors available in {CDK} may be calculated for compounds (in batch or on-the-fly), and various cheminformatic operations such as fingerprint calculation, Sammon mapping, clustering and R group table creation may be carried {out.We} detail here the features of {LICSS} and how they are implemented. We also explain the design criteria, particularly in terms of potential corporate use, which led to this particular {implementation.CONCLUSIONS}:{LICSS} is an Excel-based chemical spreadsheet with a difference: * It can usefully be used on sheets containing hundreds of thousands of compounds; it doesn't compromise the normal performance of Microsoft Excel * It is designed to be installed and run in environments in which users do not have admin privileges; installation involves merely file copying, and sharing of {LICSS} sheets invokes automatic installation * It is free and {extensibleLICSS} is open source software and we hope sufficient detail is provided here to enable developers to add their own features and share with the community.},
@@ -35,24 +223,115 @@
 }
 
 
-
-
-
-
-@article{bocatelli:2012,
-author = {Broccatelli, Fabio and Mannhold, Raimund and Moriconi, Alessio and Giuli, Sandra and Carosati, Emanuele},
-title = {QSAR Modeling and Data Mining Link Torsades de Pointes Risk to the Interplay of Extent of Metabolism, Active Transport and hERG Liability},
-journal = {Molecular Pharmaceutics},
-volume = {ASAP},
-number = {},
-pages = {},
-year = {0},
-doi = {10.1021/mp300156r},
-
-URL = {http://pubs.acs.org/doi/abs/10.1021/mp300156r},
-eprint = {http://pubs.acs.org/doi/pdf/10.1021/mp300156r}
+@article{Jeliazkova2011,
+    abstract = {The {AMBIT} web services package is one of the several existing independent implementations of the {OpenTox} Application Programming Interface and is built according to the principles of the Representational State Transfer ({REST}) architecture. The Open Source Predictive Toxicology Framework, developed by the partners in the {EC} {FP7} {OpenTox} project, aims at providing a unified access to toxicity data and predictive models, as well as validation procedures. This is achieved by i) an information model, based on a common {OWL}-{DL} ontology ii) links to related ontologies; iii) data and algorithms, available through a standardized {REST} web services interface, where every compound, data set or predictive method has a unique web address, used to retrieve its Resource Description Framework ({RDF}) representation, or initiate the associated {calculations.The} {AMBIT} web services package has been developed as an extension of {AMBIT} modules, adding the ability to create (Quantitative) {Structure-Activity} Relationship ({QSAR}) models and providing an {OpenTox} {API} compliant interface. The representation of data and processing resources in {W3C} Resource Description Framework facilitates integrating the resources as Linked Data. By uploading datasets with chemical structures and arbitrary set of properties, they become automatically available online in several formats. The services provide unified interfaces to several descriptor calculation, machine learning and similarity searching algorithms, as well as to applicability domain and toxicity prediction models. All Toxtree modules for predicting the toxicological hazard of chemical compounds are also integrated within this package. The complexity and diversity of the processing is reduced to the simple paradigm "read data from a web address, perform processing, write to a web address". The online service allows to easily run predictions, without installing any software, as well to share online datasets and models. The downloadable web application allows researchers to setup an arbitrary number of service instances for specific purposes and at suitable locations. These services could be used as a distributed framework for processing of resource-intensive tasks and data sharing or in a fully independent way, according to the specific needs. The advantage of exposing the functionality via the {OpenTox} {API} is seamless interoperability, not only within a single web application, but also in a network of distributed services. Last, but not least, the services provide a basis for building web mashups, end user applications with friendly {GUIs}, as well as embedding the functionalities in existing workflow systems.},
+    author = {Jeliazkova, Nina and Jeliazkov, Vedrin},
+    citeulike-article-id = {9306014},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-18},
+    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21575202},
+    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21575202},
+    doi = {10.1186/1758-2946-3-18},
+    issn = {1758-2946},
+    journal = {Journal of Cheminformatics},
+    keywords = {acsrdf2010, cdk--usespackage--fingerprint, cdk--usespackage--qsar, cdk--usespackage--renderer, cdk--usespackage--smiles, opentox, rdf, rest, webservices},
+    number = {1},
+    pages = {18},
+    pmid = {21575202},
+    posted-at = {2011-05-17 15:14:16},
+    priority = {2},
+    title = {{AMBIT} {RESTful} web services: an implementation of the {OpenTox} application programming interface},
+    url = {http://dx.doi.org/10.1186/1758-2946-3-18},
+    volume = {3},
+    year = {2011}
 }
 
+@article{Hardy2010,
+    abstract = {{OpenTox} provides an interoperable, standards-based Framework for the support of predictive toxicology data management, algorithms, modelling, validation and reporting. It is relevant to satisfying the chemical safety assessment requirements of the {REACH} legislation as it supports access to experimental data, (Quantitative) {Structure-Activity} Relationship models, and toxicological information through an integrating platform that adheres to regulatory requirements and {OECD} validation principles. Initial research defined the essential components of the Framework including the approach to data access, schema and management, use of controlled vocabularies and ontologies, architecture, web service and communications protocols, and selection and integration of algorithms for predictive modelling. {OpenTox} provides end-user oriented tools to non-computational specialists, risk assessors, and toxicological experts in addition to Application Programming Interfaces ({APIs}) for developers of new applications. {OpenTox} actively supports public standards for data representation, interfaces, vocabularies and ontologies, Open Source approaches to core platform components, and community-based collaboration approaches, so as to progress system interoperability {goals.The} {OpenTox} Framework includes {APIs} and services for compounds, datasets, features, algorithms, models, ontologies, tasks, validation, and reporting which may be combined into multiple applications satisfying a variety of different user needs. {OpenTox} applications are based on a set of distributed, interoperable {OpenTox} {API}-compliant {REST} web services. The {OpenTox} approach to ontology allows for efficient mapping of complementary data coming from different datasets into a unifying structure having a shared terminology and {representation.Two} initial {OpenTox} applications are presented as an illustration of the potential impact of {OpenTox} for high-quality and consistent structure-activity relationship modelling of {REACH}-relevant endpoints: {ToxPredict} which predicts and reports on toxicities for endpoints for an input chemical structure, and {ToxCreate} which builds and validates a predictive toxicity model based on an input toxicology dataset. Because of the extensible nature of the standardised Framework design, barriers of interoperability between applications and content are removed, as the user may combine data, models and validation from multiple sources in a dependable and time-effective way.},
+    author = {Hardy, Barry and Douglas, Nicki and Helma, Christoph and Rautenberg, Micha and Jeliazkova, Nina and Jeliazkov, Vedrin and Nikolova, Ivelina and Benigni, Romualdo and Tcheremenskaia, Olga and Kramer, Stefan and Girschick, Tobias and Buchwald, Fabian and Wicker, Joerg and Karwath, Andreas and Gutlein, Martin and Maunz, Andreas and Sarimveis, Haralambos and Melagraki, Georgia and Afantitis, Antreas and Sopasakis, Pantelis and Gallagher, David and Poroikov, Vladimir and Filimonov, Dmitry and Zakharov, Alexey and Lagunin, Alexey and Gloriozova, Tatyana and Novikov, Sergey and Skvortsova, Natalia and Druzhilovsky, Dmitry and Chawla, Sunil and Ghosh, Indira and Ray, Surajit and Patel, Hitesh and Escher, Sylvia},
+    citeulike-article-id = {7750823},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-2-7},
+    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941473/},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/20807436},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=20807436},
+    day = {31},
+    doi = {10.1186/1758-2946-2-7},
+    issn = {1758-2946},
+    journal = {Journal of Cheminformatics},
+    keywords = {cheminformatics, chemistry, opentox, toxicity},
+    month = aug,
+    number = {1},
+    pages = {7},
+    pmcid = {PMC2941473},
+    pmid = {20807436},
+    posted-at = {2010-09-01 05:24:27},
+    priority = {2},
+    title = {Collaborative development of predictive toxicology applications},
+    url = {http://dx.doi.org/10.1186/1758-2946-2-7},
+    volume = {2},
+    year = {2010}
+}
+
+@article{Chepelev2011b,
+    abstract = {{BACKGROUND}:Over the past several centuries, chemistry has permeated virtually every facet of human lifestyle, enriching fields as diverse as medicine, agriculture, manufacturing, warfare, and electronics, among numerous others. Unfortunately, application-specific, incompatible chemical information formats and representation strategies have emerged as a result of such diverse adoption of chemistry. Although a number of efforts have been dedicated to unifying the computational representation of chemical information, disparities between the various chemical databases still persist and stand in the way of cross-domain, interdisciplinary investigations. Through a common syntax and formal semantics, Semantic Web technology offers the ability to accurately represent, integrate, reason about and query across diverse chemical {information.RESULTS}:Here we specify and implement the Chemical Entity Semantic Specification ({CHESS}) for the representation of polyatomic chemical entities, their substructures, bonds, atoms, and reactions using Semantic Web technologies. {CHESS} provides means to capture aspects of their corresponding chemical descriptors, connectivity, functional composition, and geometric structure while specifying mechanisms for data provenance. We demonstrate that using our readily extensible specification, it is possible to efficiently integrate multiple disparate chemical data sources, while retaining appropriate correspondence of chemical descriptors, with very little additional effort. We demonstrate the impact of some of our representational decisions on the performance of chemically-aware knowledgebase searching and rudimentary reaction candidate selection. Finally, we provide access to the tools necessary to carry out chemical entity encoding in {CHESS}, along with a sample {knowledgebase.CONCLUSIONS}:By harnessing the power of Semantic Web technologies with {CHESS}, it is possible to provide a means of facile cross-domain chemical knowledge integration with full preservation of data correspondence and provenance. Our representation builds on existing cheminformatics technologies and, by the virtue of {RDF} specification, remains flexible and amenable to application- and domain-specific annotations without compromising chemical data integration. We conclude that the adoption of a consistent and semantically-enabled chemical specification is imperative for surviving the coming chemical data deluge and supporting systems science research.},
+    author = {Chepelev, Leonid and Dumontier, Michel},
+    citeulike-article-id = {9666960},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-20},
+    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21595881},
+    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21595881},
+    doi = {10.1186/1758-2946-3-20},
+    issn = {1758-2946},
+    journal = {Journal of Cheminformatics},
+    keywords = {cheminf, ontology},
+    number = {1},
+    pages = {20+},
+    pmid = {21595881},
+    posted-at = {2011-08-14 08:56:36},
+    priority = {2},
+    title = {Chemical Entity Semantic Specification: Knowledge representation for efficient semantic cheminformatics and facile data integration},
+    url = {http://dx.doi.org/10.1186/1758-2946-3-20},
+    volume = {3},
+    year = {2011}
+}
+
+@article{Sullivan:2000fk,
+	Abstract = {A methodology for the estimation of Hammett substituent constants from computational-based descriptors utilizing quantitative structure activity/property relationships (QSAR/QSPR) formalism is presented. Electronic descriptors derived from quantum chemical calculations and molecular topology were used to generate computational-based analogues of empirical Hammett substituent constants from statistical analysis. Global quantum chemical reaction indices were drawn from frontier orbital theory and density functional theory and formulated from AM1-based calculations. A localized index based on the electrotopological state index was used to encode information on individual group properties. From a training set consisting of 150 meta and para-substituted benzoic acids, statistical analysis of computational-based descriptors as a function of empirical substituent constants yielded a five-parameter QSAR/QSPR model which generates computational-based constants exhibiting a strong correlation with empirical values (r2 = 0.958). Both internal (PRESS) and external (independent testing set of benzoic acids) validation procedures suggest that the electronic effects QSAR/QSPR model derived in this work from computational-based parameters is a statistically viable paradigm. Both predicted and empirical constants were used in Hammett-type validation analyses as functions of chemical, biological, and spectroscopic data for thirty structurally diverse meta and parasubstituted aromatic testing sets. Statistical measures of ensuing correlations were examined and compared, and the empirical and predicted results were of similar quality. Validation results reveal that a large number of computational-based substituent constants can be accurately estimated from semiempirical AM1 frontier orbital energies and electronic structure information obtained directly from substituted benzoic acids without the aid of empirical parametrization.},
+	Author = {Sullivan, J.J. and Jones, A.D. and Tanji, K.K.},
+	Date-Added = {2012-07-20 22:17:08 -0400},
+	Date-Modified = {2012-07-20 22:18:51 -0400},
+	Journal = {J.~Chem.~Inf.~Comput.~Sci.},
+	Journal-Full = {Journal of chemical information and computer sciences},
+	Keywords = {qsar;qm;descriptor;},
+	Month = {Sep},
+	Number = {5},
+	Pages = {1113--1127},
+	Pmid = {11045804},
+	Pst = {ppublish},
+	Title = {{QSAR} treatment of electronic substituent effects using frontier orbital theory and topological parameters},
+	Volume = {40},
+	Year = {2000}}
+
+@article{Yang:2012fk,
+	Annote = {Knowledge of oncogenic mutations can inspire therapeutic strategies that are synthetically lethal, affecting cancer cells while sparing normal cells. Lenalidomide is an active agent in the activated B cell-like (ABC) subtype of diffuse large B cell lymphoma (DLBCL), but its mechanism of action is unknown. Lenalidomide kills ABC DLBCL cells by augmenting interferon ≤(IFN≤) production, owing to the oncogenic MYD88 mutations in these lymphomas. In a cereblon-dependent fashion, lenalidomide downregulates IRF4 and SPIB, transcription factors that together prevent IFN≤production by repressing IRF7 and amplify prosurvival NF-∫B signaling by transactivating CARD11. Blockade of B cell receptor signaling using the BTK inhibitor ibrutinib also downregulates IRF4 and consequently synergizes with lenalidomide in killing ABC DLBCLs, suggesting attractive therapeutic strategies. ∫Lenalidomide kills ABC DLBCLs by decreasing expression of IRF4 and SPIB ∫IRF4 and SPIB maintain ABC DLBCL viability ∫IRF4 and SPIB block toxic IFN≤production while enhancing prosurvival NF-∫B activity ∫Lenalidomide and BCR pathway drugs synergize to inhibit IRF4 and kill ABC DLBCLs},
+	Author = {Yang, Yibin and Shaffer, Arthur†L. and Emre, N. C. †Tolga and Ceribelli, Michele and Zhang, Meili and Wright, George and Xiao, Wenming and Powell, John and Platig, John and Kohlhammer, Holger and Young, Ryan†M. and Zhao, Hong and Yang, Yandan and Xu, Weihong and Buggy, Joseph†J. and Balasubramanian, Sriram and Mathews, Lesley†A. and Shinn, Paul and Guha, Rajarshi and Ferrer, Marc and Thomas, Craig and Waldmann, Thomas†A. and Staudt, Louis†M.},
+	Date = {2012/06/12},
+	Date-Added = {2012-06-12 13:48:21 -0400},
+	Date-Modified = {2012-06-12 13:48:43 -0400},
+	Id = {S1535-6108(12)00218-8 DOI - 10.1016/j.ccr.2012.05.024},
+	Isbn = {1535-6108},
+	Journal = {Cancer Cell},
+	Journal1 = {Cancer cell},
+	Journal2 = {Cancer Cell},
+	Keywords = {cancer; lethal; combination; matrix},
+	Month = {06},
+	Number = {6},
+	Pages = {723--737},
+	Publisher = {Cell Press,},
+	Title = {Exploiting Synthetic Lethality for the Therapy of ABC Diffuse Large B Cell Lymphoma},
+	Ty = {ABST},
+	Url = {http://linkinghub.elsevier.com/retrieve/pii/S1535610812002188},
+	Volume = {21},
+	Year = {2012},
+	Bdsk-Url-1 = {http://linkinghub.elsevier.com/retrieve/pii/S1535610812002188}}
 
 @inbook{Guha:2012fk,
 	Author = {Guha, R.},
@@ -497,11 +776,11 @@ eprint = {http://pubs.acs.org/doi/pdf/10.1021/mp300156r}
 @article{Guha:2012vn,
 	Author = {Guha, R. and Nguyen, D.-T. and Southall, N. and Jadhav, A.},
 	Date-Added = {2012-04-03 08:37:39 -0400},
-	Date-Modified = {2012-04-03 08:44:36 -0400},
+	Date-Modified = {2012-06-12 13:54:49 -0400},
 	Journal = {Curr.~Protocols Chem.~Biol.},
 	Keywords = {database; review; disambiguation; chemical biology},
 	Title = {Dealing with the Data Deluge: {H}andling the Multitude of Chemical Biology Data Sources},
-	Volume = {submitted},
+	Volume = {in press},
 	Year = {2012}}
 
 @article{Pouliot:2012kx,
@@ -1746,14 +2025,16 @@ eprint = {http://pubs.acs.org/doi/pdf/10.1021/mp300156r}
 	Bdsk-Url-1 = {http://dx.doi.org/10.1021/jm030580l}}
 
 @article{Guha:2011ys,
+	Abstract = {In this article, we present an overview of the origin and applications of the activity landscape view of structure--activity relationship (SAR) data as conceived by Shanmugasundaram and Maggiora. Within this landscape, different regions exemplify different aspects of SAR trends---ranging from smoothly varying trends to discontinuous trends (also termed activity cliffs). We discuss the various definitions of landscapes and cliffs that have been proposed as well as different approaches to the numerical quantification of a landscape. We then highlight some of the landscape visualization approaches that have been developed, followed by a review of the various applications of activity landscapes and cliffs to topics in medicinal chemistry and SAR analysis.},
 	Author = {Guha, R.},
 	Date-Added = {2011-11-14 20:53:02 -0500},
-	Date-Modified = {2012-04-03 08:45:07 -0400},
+	Date-Modified = {2012-04-25 08:31:44 -0400},
 	Journal = {{WIRE}s Comput.~Mol.~Sci.},
 	Keywords = {sar; landscape;},
 	Title = {Exploring Structure-Activity Data Using the Landscape Paradigm},
-	Volume = {in press},
-	Year = {2012}}
+	Volume = {ASAP},
+	Year = {2012},
+	Bdsk-Url-1 = {http://dx.doi.org/10.1002/wcms.1087}}
 
 @article{Pegoraro:2011uq,
 	Author = {Pegoraro, G. and Voss, T.C. and Martin, S.E. and Tuzmen, P. and Guha, R. and Mistelli, T.},
@@ -20541,7 +20822,7 @@ We describe the rcdk package that provides the R user with access to the CDK, a 
 	Date-Modified = {2008-05-17 18:52:32 -0400},
 	Journal = {CDK News},
 	Keywords = {ignore},
-<	Local-Url = {file://localhost/Users/rguha/Documents/articles/cdkR.pdf},
+	Local-Url = {file://localhost/Users/rguha/Documents/articles/cdkR.pdf},
 	Number = {1},
 	Owner = {rajarshi},
 	Pages = {2--6},
@@ -25288,286 +25569,6 @@ We describe the rcdk package that provides the R user with access to the CDK, a 
 	Title = {{Binary Fingerprint Tools}},
 	Year = {accessed on Feb. 2005}}
 
-@article{Spjuth2010,
-abstract = {ABSTRACT: BACKGROUND: QSAR is a widely used method to relate chemical structures to responses or properties based on experimental observations. Much effo
-rt has been made to evaluate and validate the statistical modeling in QSAR, but these analyses treat the dataset as fixed. An overlooked but highly important issue i
-s the validation of the setup of the dataset, which comprises addition of chemical structures as well as selection of descriptors and software implementations prior 
-to calculations. This process is hampered by the lack of standards and exchange formats in the field, making it virtually impossible to reproduce and validate analys
-es and drastically constrain collaborations and re-use of data. RESULTS: We present a step towards standardizing QSAR analyses by defining interoperable and reproduc
-ible QSAR datasets, consisting of an open XML format (QSAR-ML) which builds on an open and extensible descriptor ontology. The ontology provides an extensible way of
- uniquely defining descriptors for use in QSAR experiments, and the exchange format supports multiple versioned implementations of these descriptors. Hence, a datase
-t described by QSAR-ML makes its setup completely reproducible. We also provide a reference implementation as a set of plugins for Bioclipse which simplifies setup o
-f QSAR datasets, and allows for exporting in QSAR-ML as well as old-fashioned CSV formats. The implementation facilitates addition of new descriptor implementations 
-from locally installed software and remote Web services; the latter is demonstrated with REST and XMPP Web services. CONCLUSIONS: Standardized QSAR datasets open up 
-new ways to store, query, and exchange data for subsequent analyses. QSAR-ML supports completely reproducible creation of datasets, solving the problems of defining 
-which software components were used and their versions, and the descriptor ontology eliminates confusions regarding descriptors by defining them crisply. This makes 
-it easy to join, extend, combine datasets and hence work collectively, but also allows for analyzing the effect descriptors have on the statistical model's performan
-ce. The presented Bioclipse plugins equip scientists with graphical tools that make QSAR-ML easily accessible for the community.},
-author = {Spjuth, Ola and Willighagen, Egon L and Guha, Rajarshi and Eklund, Martin and Wikberg, Jarl Es E},
-doi = {10.1186/1758-2946-2-5},
-file = {:home/egonw/.local/share/data/Mendeley Ltd./Mendeley Desktop/Downloaded/Spjuth et al. - 2009 - Bioclipse 2 a scriptable integration platform for the life sci
-ences.pdf:pdf},
-issn = {17582946},
-journal = {Journal of Cheminformatics},
-keywords = {cheminformatics,data,interoperability,papers,qsar,xml},
-mendeley-tags = {cheminformatics,data,interoperability,papers,qsar,xml},
-month = jun,
-number = {1},
-pmid = {20591161},
-title = {{Towards interoperable and reproducible QSAR analyses: Exchange of datasets.}},
-type = {Journal article},
-volume = {2},
-year = {2010}
-}
-
-@article{Willighagen2005,
-abstract = {A new method for assessing the similarity of crystal structures is described. A similarity measure is important in classification and clustering problems
- in which the crystal structures are the source of information. Classification is particularly important for the understanding of properties of crystals, while clust
-ering can be used as a data reduction step in polymorph prediction. The method described uses a radial distribution function that combines atomic coordinates with pa
-rtial atomic charges. The descriptor is validated using experimental data from a classification study of clathrate structures of cephalosporins and data from a polym
-orph prediction run. In both cases, excellent results were obtained.},
-author = {Willighagen, E L and Wehrens, R and Verwer, P and de Gelder, R and Buydens, L M C},
-doi = {10.1107/S0108768104028344},
-issn = {0108-7681},
-journal = {Acta crystallographica. Section B, Structural science},
-keywords = {cheminformatics,chemistry,chemometrics,crystal,papers,structures},
-mendeley-tags = {cheminformatics,chemistry,chemometrics,crystal,papers,structures},
-month = mar,
-number = {Pt 1},
-pages = {29--36},
-pmid = {15659855},
-publisher = {International Union of Crystallography},
-title = {{Method for the computational comparison of crystal structures.}},
-type = {Journal article},
-url = {http://www.ncbi.nlm.nih.gov/pubmed/15659855},
-volume = {61},
-year = {2005}
-}
-@article{Willighagen2007,
-abstract = {Supervised self-organizing maps (SOMs) provide a new method to explore large numbers of crystal structures and to visualize structureproperty relationshi
-ps. Examples show how powder diffraction patterns and one or more structural properties determine the positions of crystal structures on the supervised SOMs, and sho
-w that the maps allow the classification of structures, prediction of properties, and subset selection in polymorph prediction.},
-author = {Willighagen, E. L. and Wehrens, R. and Melssen, W. and de Gelder, R. and Buydens, L. M. C.},
-doi = {10.1021/cg060872y},
-issn = {1528-7483},
-journal = {Crystal Growth \& Design},
-keywords = {cheminformatics,chemistry,chemometrics,cito--iscitedby--8146859,crystallography,kohonen,papers,som,supervised},
-mendeley-tags = {cheminformatics,chemistry,chemometrics,cito--iscitedby--8146859,crystallography,kohonen,papers,som,supervised},
-month = sep,
-number = {9},
-pages = {1738--1745},
-title = {{Supervised Self-Organizing Maps in Crystal Property and Structure Prediction}},
-type = {Journal article},
-url = {http://pubs.acs.org/doi/abs/10.1021/cg060872y http://www.citeulike.org/user/egonw/article/5656657},
-volume = {7},
-year = {2007}
-}
-@article{Wehrens2006,
-author = {Wehrens, R and Willighagen, EL},
-journal = {RNews},
-keywords = {crystallography,database,kohonen,learning,machine,map,papers,r,som,statistics},
-mendeley-tags = {crystallography,database,kohonen,learning,machine,map,papers,r,som,statistics},
-number = {3},
-pages = {24 -- 28},
-title = {{Mapping databases of X-ray powder patterns}},
-type = {Journal article},
-url = {http://www.citeulike.org/user/egonw/article/5645202},
-volume = {6},
-year = {2006}
-}
-
-@article{AiresDeSousa2002,
-    abstract = {doi: 10.1021/ac010737m Counterpropagation neural networks were applied to the fast prediction of {1H} {NMR} chemical shifts of {CHn} groups in organic compounds. The training set consisted of 744 examples of protons that were represented by physicochemical, topological, and geometric descriptors. The selection of descriptors was performed by genetic algorithms, and the models obtained were compared to those containing all the descriptors. The best models yielded very good predictions for an independent prediction set of 259 cases (mean absolute error for whole set, 0.25 ppm; mean absolute error for 90\% of cases, 0.19 ppm) and for application cases consisting of four natural products recently described. Some stereochemical effects could be correctly predicted. A useful feature of the system resides in its ability to be retrained with a specific data set of compounds if improved predictions for related structures are required.},
-    author = {Aires-De-Sousa, Joao and Hemmer, Markus C. and Gasteiger, Johann},
-    citeulike-article-id = {4030139},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1021/ac010737m},
-    citeulike-linkout-1 = {http://pubs.acs.org/doi/abs/10.1021/ac010737m},
-    day = {1},
-    doi = {10.1021/ac010737m},
-    journal = {Analytical Chemistry},
-    month = jan,
-    number = {1},
-    pages = {80--90},
-    posted-at = {2009-02-10 15:37:40},
-    priority = {2},
-    title = {Prediction of {1H} {NMR} Chemical Shifts Using Neural Networks},
-    url = {http://dx.doi.org/10.1021/ac010737m},
-    volume = {74},
-    year = {2002}
-}
-
-@article{Truszkowski2011,
-    abstract = {
-                {ABSTRACT}:
-                The computational processing and analysis of small molecules is at heart of cheminformatics and structural bioinformatics and their application in e.g. metabolomics or drug discovery. Pipelining or workflow tools allow for the Lego™-like, graphical assembly of {I/O} modules and algorithms into a complex workflow which can be easily deployed, modified and tested without the hassle of implementing it into a monolithic application. The {CDK}-Taverna project aims at building a free open-source cheminformatics pipelining solution through combination of different open-source projects such as Taverna, the Chemistry Development Kit ({CDK}) or the Waikato Environment for Knowledge Analysis ({WEKA}). A first integrated version 1.0 of {CDK}-Taverna was recently released to the public.
-                The {CDK}-Taverna project was migrated to the most up-to-date versions of its foundational software libraries with a complete re-engineering of its worker's architecture (version 2.0). 64-bit computing and multi-core usage by paralleled threads are now supported to allow for fast in-memory processing and analysis of large sets of molecules. Earlier deficiencies like workarounds for iterative data reading are removed. The combinatorial chemistry related reaction enumeration features are considerably enhanced. Additional functionality for calculating a natural product likeness score for small molecules is implemented to identify possible drug candidates. Finally the data analysis capabilities are extended with new workers that provide access to the open-source {WEKA} library for clustering and machine learning as well as training and test set partitioning. The new features are outlined with usage scenarios.
-                {CDK}-Taverna 2.0 as an open-source cheminformatics workflow solution matured to become a freely available and increasingly powerful tool for the biosciences. The combination of the new {CDK}-Taverna worker family with the already available workflows developed by a lively Taverna community and published on myexperiment.org enables molecular scientists to quickly calculate, process and analyse molecular data as typically found in e.g. today's systems biology scenarios.
-            },
-    author = {Truszkowski, Andreas and Jayaseelan, Kalai Vanii V. and Neumann, Stefan and Willighagen, Egon L. and Zielesny, Achim and Steinbeck, Christoph},
-    citeulike-article-id = {10124844},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-54},
-    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3292505/},
-    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/22166170},
-    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=22166170},
-    day = {13},
-    doi = {10.1186/1758-2946-3-54},
-    issn = {1758-2946},
-    journal = {Journal of cheminformatics},
-    keywords = {cheminformatics, taverna},
-    month = dec,
-    number = {1},
-    pages = {54+},
-    pmcid = {PMC3292505},
-    pmid = {22166170},
-    posted-at = {2011-12-13 15:39:20},
-    priority = {2},
-    title = {New developments on the cheminformatics open workflow environment {CDK}-Taverna.},
-    url = {http://dx.doi.org/10.1186/1758-2946-3-54},
-    volume = {3},
-    year = {2011}
-}
-
-@article{Jelizakova2011,
-    abstract = {The {AMBIT} web services package is one of the several existing independent implementations of the {OpenTox} Application Programming Interface and is built according to the principles of the Representational State Transfer ({REST}) architecture. The Open Source Predictive Toxicology Framework, developed by the partners in the {EC} {FP7} {OpenTox} project, aims at providing a unified access to toxicity data and predictive models, as well as validation procedures. This is achieved by i) an information model, based on a common {OWL}-{DL} ontology ii) links to related ontologies; iii) data and algorithms, available through a standardized {REST} web services interface, where every compound, data set or predictive method has a unique web address, used to retrieve its Resource Description Framework ({RDF}) representation, or initiate the associated {calculations.The} {AMBIT} web services package has been developed as an extension of {AMBIT} modules, adding the ability to create (Quantitative) {Structure-Activity} Relationship ({QSAR}) models and providing an {OpenTox} {API} compliant interface. The representation of data and processing resources in {W3C} Resource Description Framework facilitates integrating the resources as Linked Data. By uploading datasets with chemical structures and arbitrary set of properties, they become automatically available online in several formats. The services provide unified interfaces to several descriptor calculation, machine learning and similarity searching algorithms, as well as to applicability domain and toxicity prediction models. All Toxtree modules for predicting the toxicological hazard of chemical compounds are also integrated within this package. The complexity and diversity of the processing is reduced to the simple paradigm "read data from a web address, perform processing, write to a web address". The online service allows to easily run predictions, without installing any software, as well to share online datasets and models. The downloadable web application allows researchers to setup an arbitrary number of service instances for specific purposes and at suitable locations. These services could be used as a distributed framework for processing of resource-intensive tasks and data sharing or in a fully independent way, according to the specific needs. The advantage of exposing the functionality via the {OpenTox} {API} is seamless interoperability, not only within a single web application, but also in a network of distributed services. Last, but not least, the services provide a basis for building web mashups, end user applications with friendly {GUIs}, as well as embedding the functionalities in existing workflow systems.},
-    author = {Jeliazkova, Nina and Jeliazkov, Vedrin},
-    citeulike-article-id = {9306014},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-18},
-    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21575202},
-    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21575202},
-    doi = {10.1186/1758-2946-3-18},
-    issn = {1758-2946},
-    journal = {Journal of Cheminformatics},
-    keywords = {acsrdf2010, cdk--usespackage--fingerprint, cdk--usespackage--qsar, cdk--usespackage--renderer, cdk--usespackage--smiles, opentox, rdf, rest, webservices},
-    number = {1},
-    pages = {18+},
-    pmid = {21575202},
-    posted-at = {2011-05-17 15:14:16},
-    priority = {2},
-    title = {{AMBIT} {RESTful} web services: an implementation of the {OpenTox} application programming interface},
-    url = {http://dx.doi.org/10.1186/1758-2946-3-18},
-    volume = {3},
-    year = {2011}
-}
-
-@article{Hastings2011,
-    abstract = {Cheminformatics is the application of informatics techniques to solve chemical problems in silico. There are many areas in biology where cheminformatics plays an important role in computational research, including metabolism, proteomics, and systems biology. One critical aspect in the application of cheminformatics in these fields is the accurate exchange of data, which is increasingly accomplished through the use of ontologies. Ontologies are formal representations of objects and their properties using a logic-based ontology language. Many such ontologies are currently being developed to represent objects across all the domains of science. Ontologies enable the definition, classification, and support for querying objects in a particular domain, enabling intelligent computer applications to be built which support the work of scientists both within the domain of interest and across interrelated neighbouring domains. Modern chemical research relies on computational techniques to filter and organise data to maximise research productivity. The objects which are manipulated in these algorithms and procedures, as well as the algorithms and procedures themselves, enjoy a kind of virtual life within computers. We will call these information entities. Here, we describe our work in developing an ontology of chemical information entities, with a primary focus on data-driven research and the integration of calculated properties (descriptors) of chemical entities within a semantic web context. Our ontology distinguishes algorithmic, or procedural information from declarative, or factual information, and renders of particular importance the annotation of provenance to calculated data. The Chemical Information Ontology is being developed as an open collaborative project. More details, together with a downloadable {OWL} file, are available at http://code.google.com/p/semanticchemist​ry/ (license: {CC}-{BY}-{SA}).},
-    author = {Hastings, Janna and Chepelev, Leonid and Willighagen, Egon and Adams, Nico and Steinbeck, Christoph and Dumontier, Michel},
-    citeulike-article-id = {9849008},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1371/journal.pone.0025513},
-    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3184996/},
-    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/21991315},
-    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=21991315},
-    day = {3},
-    doi = {10.1371/journal.pone.0025513},
-    issn = {1932-6203},
-    journal = {PLoS ONE},
-    keywords = {cdk--usespackage--qsar, cheminformatics, ontology},
-    month = oct,
-    number = {10},
-    pages = {e25513+},
-    pmcid = {PMC3184996},
-    pmid = {21991315},
-    posted-at = {2011-10-04 09:19:07},
-    priority = {2},
-    publisher = {Public Library of Science},
-    title = {The Chemical Information Ontology: Provenance and Disambiguation for Chemical Data on the Biological Semantic Web},
-    url = {http://dx.doi.org/10.1371/journal.pone.0025513},
-    volume = {6},
-    year = {2011}
-}
-
-@article{Chepelev2011b,
-    abstract = {{BACKGROUND}:Over the past several centuries, chemistry has permeated virtually every facet of human lifestyle, enriching fields as diverse as medicine, agriculture, manufacturing, warfare, and electronics, among numerous others. Unfortunately, application-specific, incompatible chemical information formats and representation strategies have emerged as a result of such diverse adoption of chemistry. Although a number of efforts have been dedicated to unifying the computational representation of chemical information, disparities between the various chemical databases still persist and stand in the way of cross-domain, interdisciplinary investigations. Through a common syntax and formal semantics, Semantic Web technology offers the ability to accurately represent, integrate, reason about and query across diverse chemical {information.RESULTS}:Here we specify and implement the Chemical Entity Semantic Specification ({CHESS}) for the representation of polyatomic chemical entities, their substructures, bonds, atoms, and reactions using Semantic Web technologies. {CHESS} provides means to capture aspects of their corresponding chemical descriptors, connectivity, functional composition, and geometric structure while specifying mechanisms for data provenance. We demonstrate that using our readily extensible specification, it is possible to efficiently integrate multiple disparate chemical data sources, while retaining appropriate correspondence of chemical descriptors, with very little additional effort. We demonstrate the impact of some of our representational decisions on the performance of chemically-aware knowledgebase searching and rudimentary reaction candidate selection. Finally, we provide access to the tools necessary to carry out chemical entity encoding in {CHESS}, along with a sample {knowledgebase.CONCLUSIONS}:By harnessing the power of Semantic Web technologies with {CHESS}, it is possible to provide a means of facile cross-domain chemical knowledge integration with full preservation of data correspondence and provenance. Our representation builds on existing cheminformatics technologies and, by the virtue of {RDF} specification, remains flexible and amenable to application- and domain-specific annotations without compromising chemical data integration. We conclude that the adoption of a consistent and semantically-enabled chemical specification is imperative for surviving the coming chemical data deluge and supporting systems science research.},
-    author = {Chepelev, Leonid and Dumontier, Michel},
-    citeulike-article-id = {9666960},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-20},
-    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21595881},
-    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21595881},
-    doi = {10.1186/1758-2946-3-20},
-    issn = {1758-2946},
-    journal = {Journal of Cheminformatics},
-    keywords = {cheminf, ontology},
-    number = {1},
-    pages = {20+},
-    pmid = {21595881},
-    posted-at = {2011-08-14 08:56:36},
-    priority = {2},
-    title = {Chemical Entity Semantic Specification: Knowledge representation for efficient semantic cheminformatics and facile data integration},
-    url = {http://dx.doi.org/10.1186/1758-2946-3-20},
-    volume = {3},
-    year = {2011}
-}
-
-@article{Jeliazkova2011,
-    abstract = {The {AMBIT} web services package is one of the several existing independent implementations of the {OpenTox} Application Programming Interface and is built according to the principles of the Representational State Transfer ({REST}) architecture. The Open Source Predictive Toxicology Framework, developed by the partners in the {EC} {FP7} {OpenTox} project, aims at providing a unified access to toxicity data and predictive models, as well as validation procedures. This is achieved by i) an information model, based on a common {OWL}-{DL} ontology ii) links to related ontologies; iii) data and algorithms, available through a standardized {REST} web services interface, where every compound, data set or predictive method has a unique web address, used to retrieve its Resource Description Framework ({RDF}) representation, or initiate the associated {calculations.The} {AMBIT} web services package has been developed as an extension of {AMBIT} modules, adding the ability to create (Quantitative) {Structure-Activity} Relationship ({QSAR}) models and providing an {OpenTox} {API} compliant interface. The representation of data and processing resources in {W3C} Resource Description Framework facilitates integrating the resources as Linked Data. By uploading datasets with chemical structures and arbitrary set of properties, they become automatically available online in several formats. The services provide unified interfaces to several descriptor calculation, machine learning and similarity searching algorithms, as well as to applicability domain and toxicity prediction models. All Toxtree modules for predicting the toxicological hazard of chemical compounds are also integrated within this package. The complexity and diversity of the processing is reduced to the simple paradigm "read data from a web address, perform processing, write to a web address". The online service allows to easily run predictions, without installing any software, as well to share online datasets and models. The downloadable web application allows researchers to setup an arbitrary number of service instances for specific purposes and at suitable locations. These services could be used as a distributed framework for processing of resource-intensive tasks and data sharing or in a fully independent way, according to the specific needs. The advantage of exposing the functionality via the {OpenTox} {API} is seamless interoperability, not only within a single web application, but also in a network of distributed services. Last, but not least, the services provide a basis for building web mashups, end user applications with friendly {GUIs}, as well as embedding the functionalities in existing workflow systems.},
-    author = {Jeliazkova, Nina and Jeliazkov, Vedrin},
-    citeulike-article-id = {9306014},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-18},
-    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21575202},
-    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21575202},
-    doi = {10.1186/1758-2946-3-18},
-    issn = {1758-2946},
-    journal = {Journal of Cheminformatics},
-    keywords = {acsrdf2010, cdk--usespackage--fingerprint, cdk--usespackage--qsar, cdk--usespackage--renderer, cdk--usespackage--smiles, opentox, rdf, rest, webservices},
-    number = {1},
-    pages = {18},
-    pmid = {21575202},
-    posted-at = {2011-05-17 15:14:16},
-    priority = {2},
-    title = {{AMBIT} {RESTful} web services: an implementation of the {OpenTox} application programming interface},
-    url = {http://dx.doi.org/10.1186/1758-2946-3-18},
-    volume = {3},
-    year = {2011}
-}
-
-@article{Hardy2010,
-    abstract = {{OpenTox} provides an interoperable, standards-based Framework for the support of predictive toxicology data management, algorithms, modelling, validation and reporting. It is relevant to satisfying the chemical safety assessment requirements of the {REACH} legislation as it supports access to experimental data, (Quantitative) {Structure-Activity} Relationship models, and toxicological information through an integrating platform that adheres to regulatory requirements and {OECD} validation principles. Initial research defined the essential components of the Framework including the approach to data access, schema and management, use of controlled vocabularies and ontologies, architecture, web service and communications protocols, and selection and integration of algorithms for predictive modelling. {OpenTox} provides end-user oriented tools to non-computational specialists, risk assessors, and toxicological experts in addition to Application Programming Interfaces ({APIs}) for developers of new applications. {OpenTox} actively supports public standards for data representation, interfaces, vocabularies and ontologies, Open Source approaches to core platform components, and community-based collaboration approaches, so as to progress system interoperability {goals.The} {OpenTox} Framework includes {APIs} and services for compounds, datasets, features, algorithms, models, ontologies, tasks, validation, and reporting which may be combined into multiple applications satisfying a variety of different user needs. {OpenTox} applications are based on a set of distributed, interoperable {OpenTox} {API}-compliant {REST} web services. The {OpenTox} approach to ontology allows for efficient mapping of complementary data coming from different datasets into a unifying structure having a shared terminology and {representation.Two} initial {OpenTox} applications are presented as an illustration of the potential impact of {OpenTox} for high-quality and consistent structure-activity relationship modelling of {REACH}-relevant endpoints: {ToxPredict} which predicts and reports on toxicities for endpoints for an input chemical structure, and {ToxCreate} which builds and validates a predictive toxicity model based on an input toxicology dataset. Because of the extensible nature of the standardised Framework design, barriers of interoperability between applications and content are removed, as the user may combine data, models and validation from multiple sources in a dependable and time-effective way.},
-    author = {Hardy, Barry and Douglas, Nicki and Helma, Christoph and Rautenberg, Micha and Jeliazkova, Nina and Jeliazkov, Vedrin and Nikolova, Ivelina and Benigni, Romualdo and Tcheremenskaia, Olga and Kramer, Stefan and Girschick, Tobias and Buchwald, Fabian and Wicker, Joerg and Karwath, Andreas and Gutlein, Martin and Maunz, Andreas and Sarimveis, Haralambos and Melagraki, Georgia and Afantitis, Antreas and Sopasakis, Pantelis and Gallagher, David and Poroikov, Vladimir and Filimonov, Dmitry and Zakharov, Alexey and Lagunin, Alexey and Gloriozova, Tatyana and Novikov, Sergey and Skvortsova, Natalia and Druzhilovsky, Dmitry and Chawla, Sunil and Ghosh, Indira and Ray, Surajit and Patel, Hitesh and Escher, Sylvia},
-    citeulike-article-id = {7750823},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-2-7},
-    citeulike-linkout-1 = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2941473/},
-    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/20807436},
-    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=20807436},
-    day = {31},
-    doi = {10.1186/1758-2946-2-7},
-    issn = {1758-2946},
-    journal = {Journal of Cheminformatics},
-    keywords = {cheminformatics, chemistry, opentox, toxicity},
-    month = aug,
-    number = {1},
-    pages = {7},
-    pmcid = {PMC2941473},
-    pmid = {20807436},
-    posted-at = {2010-09-01 05:24:27},
-    priority = {2},
-    title = {Collaborative development of predictive toxicology applications},
-    url = {http://dx.doi.org/10.1186/1758-2946-2-7},
-    volume = {2},
-    year = {2010}
-}
-
-@article{Chepelev2011b,
-    abstract = {{BACKGROUND}:Over the past several centuries, chemistry has permeated virtually every facet of human lifestyle, enriching fields as diverse as medicine, agriculture, manufacturing, warfare, and electronics, among numerous others. Unfortunately, application-specific, incompatible chemical information formats and representation strategies have emerged as a result of such diverse adoption of chemistry. Although a number of efforts have been dedicated to unifying the computational representation of chemical information, disparities between the various chemical databases still persist and stand in the way of cross-domain, interdisciplinary investigations. Through a common syntax and formal semantics, Semantic Web technology offers the ability to accurately represent, integrate, reason about and query across diverse chemical {information.RESULTS}:Here we specify and implement the Chemical Entity Semantic Specification ({CHESS}) for the representation of polyatomic chemical entities, their substructures, bonds, atoms, and reactions using Semantic Web technologies. {CHESS} provides means to capture aspects of their corresponding chemical descriptors, connectivity, functional composition, and geometric structure while specifying mechanisms for data provenance. We demonstrate that using our readily extensible specification, it is possible to efficiently integrate multiple disparate chemical data sources, while retaining appropriate correspondence of chemical descriptors, with very little additional effort. We demonstrate the impact of some of our representational decisions on the performance of chemically-aware knowledgebase searching and rudimentary reaction candidate selection. Finally, we provide access to the tools necessary to carry out chemical entity encoding in {CHESS}, along with a sample {knowledgebase.CONCLUSIONS}:By harnessing the power of Semantic Web technologies with {CHESS}, it is possible to provide a means of facile cross-domain chemical knowledge integration with full preservation of data correspondence and provenance. Our representation builds on existing cheminformatics technologies and, by the virtue of {RDF} specification, remains flexible and amenable to application- and domain-specific annotations without compromising chemical data integration. We conclude that the adoption of a consistent and semantically-enabled chemical specification is imperative for surviving the coming chemical data deluge and supporting systems science research.},
-    author = {Chepelev, Leonid and Dumontier, Michel},
-    citeulike-article-id = {9666960},
-    citeulike-linkout-0 = {http://dx.doi.org/10.1186/1758-2946-3-20},
-    citeulike-linkout-1 = {http://view.ncbi.nlm.nih.gov/pubmed/21595881},
-    citeulike-linkout-2 = {http://www.hubmed.org/display.cgi?uids=21595881},
-    doi = {10.1186/1758-2946-3-20},
-    issn = {1758-2946},
-    journal = {Journal of Cheminformatics},
-    keywords = {cheminf, ontology},
-    number = {1},
-    pages = {20+},
-    pmid = {21595881},
-    posted-at = {2011-08-14 08:56:36},
-    priority = {2},
-    title = {Chemical Entity Semantic Specification: Knowledge representation for efficient semantic cheminformatics and facile data integration},
-    url = {http://dx.doi.org/10.1186/1758-2946-3-20},
-    volume = {3},
-    year = {2011}
-}
-
 @comment{BibDesk Static Groups{
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -25595,7 +25596,7 @@ year = {2006}
 		<key>group name</key>
 		<string>Exploring SAR</string>
 		<key>keys</key>
-		<string>Chen:2009hb,Korff:2006aa,Bajorath:2009ai</string>
+		<string>Bajorath:2009ai,Chen:2009hb,Korff:2006aa</string>
 	</dict>
 	<dict>
 		<key>group name</key>

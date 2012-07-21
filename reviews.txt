@@ -1,32 +1,17 @@
-This submission provides a useful review of chemical descriptors and is well referenced.  I recommend the paper for publication following some minor changes.  Most of these I would ask the authors to consider changing – but would give differ to their judgment.  I’ve *** the ones that I think should be addressed for publication.
-First, simple editorial comments
-1.      *** Page 2, line 8 opens a parenthesis that is never closed.  I’m guessing it is just not needed as the sentence is easy enough to read.
-
-2.     Page 2, line 22.  The sentence starting “It is easy to understand…” contains a hyphen.  I would maybe just remove part of the sentence or simplify:  “Implementations of the same descriptor can lead to different results due to differences in the underlying framework or toolkint.”  I’ll leave this change to the authors discretion.
-
-3.     Page 4, lines 27 and 28.  The words ‘rapid’ and ‘rapidly’ appear in the same sentence.  I would recommend changing to a synonym: quick/fast…
-
 4.     Page 4, line 33.  “time complexity” .  should this be “time and complexity”?
 
-5.     Page 5.  A paper related to the QM descriptor discussion that the authors  may consider adding:  “QSAR Treatment of Electronic Substituent Effects Using Frontier Orbital Theory and Topological Parameters”, Sullivan, Jones and Tanji, JCIM, 2000, 40(5), 1113-1127. http://pubs.acs.org/doi/abs/10.1021/ci990222k
+In fact "time complexity" was intended (http://en.wikipedia.org/wiki/Time_complexity)
 
-6.     Section 2 headings:  “fingerprints” get section 2.1, but all other descriptors are under the main heading?  Maybe have a ‘continuous value descriptors’ or ‘non-fingerprint descriptors’???
 
 7.     Page 9.  Line 9.  “Every descriptor implements an interface…”  The descriptors do not actually implement anything.  What are the authors saying here?
+
+Updated to note that descriptor *classes* implement the interface
 
 8.     Page 11.  ~line 17.  “the fact many descriptors are correlated with others suggests that it does not matter too much which set of descriptors are used in an application”.  I disagree and have trouble thinking of any application where this would generally be true.   For instance, using the authors own categorization – I would be shocked if similar results (say for clustering or similarity) would be achieved using atom-pair fingerprints versus nearly any set of QM descriptors.  I would hope the authors are attempting to say something like “there are many instances of overlap between descriptors types (for example: MOE VSA and Jurs/Stanton CPSA) and choosing amongst related descriptor types may not have a substantial impact on certain results/applications.” 
 
 9.     Page 11.  Just down a few lines.  The comment that ACD does much better.  Do the authors know the overlap between the logPstar dataset and ACD/XlogP/ChemAxon?  Is there a reference for this work?  I worry that the ACD set simply has more compounds from logPstar in the training set – and therefore gives the appearance of performing better.
 
-10.  Page 11.  Last line.  “To address the CDK…” maybe should read “To address this, the CDK…”
-
 11.  Figure 1.  This could use a better figure heading.  Units would be nice. 
-
-12.  Table 1.  OpenBabel have no listing for descriptors.  Either add something or remove from table.
-
-13.  ***Figure 2. Mentions “Four” tools – I see 3.  The heading ends in “and…”. 
-
-14.  Figure 3.  There is not a med-chemist in the universe that is going to look at this figure.  Heading is weak.
 
 Second, general suggestions (take’em or leave em).
 1.     It would be good to have some more specific examples – perhaps in the beginning or section 2 – to highlight or show some descriptors.  The journal is Current Topics in Medicinal Chemistry.  Med-chemists love structures and would probably get more out of it if there were some very simple examples at the start.
