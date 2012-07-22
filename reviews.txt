@@ -7,7 +7,34 @@ In fact "time complexity" was intended (http://en.wikipedia.org/wiki/Time_comple
 
 Updated to note that descriptor *classes* implement the interface
 
-8.     Page 11.  ~line 17.  “the fact many descriptors are correlated with others suggests that it does not matter too much which set of descriptors are used in an application”.  I disagree and have trouble thinking of any application where this would generally be true.   For instance, using the authors own categorization – I would be shocked if similar results (say for clustering or similarity) would be achieved using atom-pair fingerprints versus nearly any set of QM descriptors.  I would hope the authors are attempting to say something like “there are many instances of overlap between descriptors types (for example: MOE VSA and Jurs/Stanton CPSA) and choosing amongst related descriptor types may not have a substantial impact on certain results/applications.” 
+8.     Page 11.  ~line 17.  “the fact many descriptors are correlated
+with others suggests that it does not matter too much which set of
+descriptors are used in an application”.  I disagree and have trouble
+thinking of any application where this would generally be true.   For
+instance, using the authors own categorization – I would be shocked if
+similar results (say for clustering or similarity) would be achieved
+using atom-pair fingerprints versus nearly any set of QM descriptors.
+I would hope the authors are attempting to say something like “there
+are many instances of overlap between descriptors types (for example:
+MOE VSA and Jurs/Stanton CPSA) and choosing amongst related descriptor
+types may not have a substantial impact on certain
+results/applications.” 
+
+While it is true that there are ovleraps between descriptor types, and
+that choosing one type ofdescriptor over another, assuming they are
+related, will not really change a model, the exact same thing can be
+said of numerically correlated descriptors. We did not mention
+anywhere that swapping atom-pair fingerprints with QM descriptors is a
+valid procedure.
+
+However if descriptor X and descriptor Y are numerically correlated
+(as measured by a high Pearsons correlation value), then a predictive
+model where X is replaced with Y will not show any significant
+changes. This is true even if X & Y characterize differenct aspects of
+the molecule (but indicates that these 'different' aspects are
+actually related at a more fndamental level).
+
+However, the text has been updated to make this point more explicitly.
 
 9.     Page 11.  Just down a few lines.  The comment that ACD does much better.  Do the authors know the overlap between the logPstar dataset and ACD/XlogP/ChemAxon?  Is there a reference for this work?  I worry that the ACD set simply has more compounds from logPstar in the training set – and therefore gives the appearance of performing better.
 
@@ -16,7 +43,9 @@ Updated to note that descriptor *classes* implement the interface
 Second, general suggestions (take’em or leave em).
 1.     It would be good to have some more specific examples – perhaps in the beginning or section 2 – to highlight or show some descriptors.  The journal is Current Topics in Medicinal Chemistry.  Med-chemists love structures and would probably get more out of it if there were some very simple examples at the start.
 
-2.     ***Abbreviation summary would be very helpful.  For instance RDF is reference, and the authors mention radial distribution functions at another point in the paper (clearly different – but maybe worth specifying).  The authors spell out “charge polar surface area” (but don’t give the CPSA abbreviation), then, soon after,  give “Topological Polar Surface Area (TPSA)”  (which is good!), but then mention “VSA” with no abbreviation (MOE VSA).    Soon after that: VABC??  And CDK??
+2.     ***Abbreviation summary would be very helpful.
+
+Abbreviations have been included or expanded, where relevant.
 
 3.     I feel like section 3 could use some more work.  “What is a useful descriptor?”  Do the authors know?  Does it depend on the problem:  potency model?  ADME?  Clustering/similarity?  Certainly the authors know a little bit about visualization.  Feel free to give some expert opinion.
 

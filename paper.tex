@@ -168,42 +168,43 @@ surface. The simplest such example is the surface area descriptor (and
 the corresponding volume descriptor). A simple extension of such a
 descriptor is to characterize distributions of a physicochemical
 property over the molecular surface such as the Charged Partial
-Surface Area descriptors \cite{Stanton:1990aa} that characterize the
-partial charge distribution over the molecular surface. Note that
-surface descriptor calculations based on analytical
+Surface Area descriptors (CPSA) \cite{Stanton:1990aa} that
+characterize the partial charge distribution over the molecular
+surface. Note that surface descriptor calculations based on analytical
 \cite{Connolly:1983aa} or tessellation algorithms
 \cite{Eisenhaber:1995qf} can be slow and that parameterized methods
 such as the Topological Polar Surface Area (TPSA) \cite{Ertl:2000aa}
-and VSA descriptors \cite{Labute:2008aa} that are based on
-precalculated surface area values derived from a list of functional
-groups.
+and MOE van der Waals Surface Area (VSA) descriptors
+\cite{Labute:2008aa} that are based on precalculated surface area
+values derived from a list of functional groups.
 
 It is important to note that there is a difference between the
 information a descriptor captures and how it is calculated. The above
 categories are based on input requirements. This gives rise to
-situations where the molecular volume property can be
-described by geometrical descriptors, e.g. using an analytical
-approaches ~\cite{Eisenhaber:1995qf}, and with approximate,
-constitutional descriptors, such as the very fast algorithm use by the
-VABC approach~\cite{Zhao:2003fk} which is based on group
-contributions.  The latter descriptor has been implemented in the CDK
-and correlates well with other approximations to the molecular volume
-(Figure \ref{fig:molvol}).
+situations where the molecular volume property can be described by
+geometrical descriptors, e.g. using an analytical approaches
+~\cite{Eisenhaber:1995qf}, and with approximate, constitutional
+descriptors, such as the very fast algorithm use by the van der Waals
+Volume as a Sum of Atomic and Bond Contributions (VABC)
+approach~\cite{Zhao:2003fk} which is based on group contributions.
+The latter descriptor has been implemented in the Chemistry
+Development Kit (CDK) and correlates well with other approximations to
+the molecular volume (Figure \ref{fig:molvol}).
 
 Another important class of geometrical descriptors are those that
-describe molecular shape. This property is a key factor in ligand-receptor interactions and is
-an important approach to virtual screening. A variety of descriptors
-have been devised to characterize molecular shape. The use of
-overlapping atom centered Gaussians to represent molecular shape
-\cite{Grant:1995aa} represents a significant computational advantage
-over the traditional analytical approach of intersecting hard spheres,
-supporting extremely rapid shape comparisons \cite{Grant:1999vn}. An
-alternative approach described by Ritchie et al \cite{Ritchie:1999kx}
-employed a spherical harmonic based representation of surfaces, that
-in contrast to the Gaussian approach allows one to generate
-characterizations of the surface and hence the shape at varying
-resolutions. Another approach to multi-resolution shape
-representations is the use of $\alpha$ shapes
+describe molecular shape. This property is a key factor in
+ligand-receptor interactions and is an important approach to virtual
+screening. A variety of descriptors have been devised to characterize
+molecular shape. The use of overlapping atom centered Gaussians to
+represent molecular shape \cite{Grant:1995aa} represents a significant
+computational advantage over the traditional analytical approach of
+intersecting hard spheres, supporting extremely rapid shape
+comparisons \cite{Grant:1999vn}. An alternative approach described by
+Ritchie et al \cite{Ritchie:1999kx} employed a spherical harmonic
+based representation of surfaces, that in contrast to the Gaussian
+approach allows one to generate characterizations of the surface and
+hence the shape at varying resolutions. Another approach to
+multi-resolution shape representations is the use of $\alpha$ shapes
 \cite{Edelsbrunner:1994aa}, which represent a parameterization of the
 convex hull derived from the molecular coordinates. This approach has
 been employed to characterize shape and volume \cite{Wilson:2009ys}
@@ -225,20 +226,23 @@ indices based on the molecular topology have also been described
 analogous to the VSA descriptors) but do not directly represent the
 molecular shape and instead infer it from topological connectivity.
 
-The last category consists of QM descriptors. These
-descriptors can also be applied to problems such as QSAR models
-(though of course the time complexity of QM derived descriptors do not
-make them amenable for large scale virtual screening
-applications). These descriptors can be evaluated at various levels of
-theory. For example, partial charges, HOMO and LUMO energies are
-commonly evaluated using semi-empirical methods, while Eroglu and
-T\"{u}rkmen \cite{Eroglu:2007uq} described DFT-derived descriptors
-such as electronegativity, hardness and ionization potential (though
-Puzyn et al question the need for such a high level of theory
-\cite{Puzyn:2008fk}). Sullivan et al \cite{Sullivan:2000fk} employed
-frontier orbital theory and DFT to generate quantum mechanical analogs
-of Hammett substituent constants \cite{Hammett:1937aa} and showed that
-they agreed well with empirically derived constants.
+The last category consists of QM descriptors. These descriptors can
+also be applied to problems such as Quantitative Structure-Activity
+Relationship (QSAR) models (though of course the
+time complexity of QM derived descriptors do not make them amenable
+for large scale virtual screening applications). These descriptors can
+be evaluated at various levels of theory. For example, partial
+charges, Highest Occupied Molecular Orbital (HOMO) and Lowest Occupied
+MOlecular Orbital (LUMO) energies are commonly evaluated using
+semi-empirical methods, while Eroglu and T\"{u}rkmen
+\cite{Eroglu:2007uq} described density functional theory (DFT) derived
+descriptors such as electronegativity, hardness and ionization
+potential (though Puzyn et al question the need for such a high level
+of theory \cite{Puzyn:2008fk}). Sullivan et al \cite{Sullivan:2000fk}
+employed frontier orbital theory and DFT to generate quantum
+mechanical analogs of Hammett substituent constants
+\cite{Hammett:1937aa} and showed that they agreed well with
+empirically derived constants.
 
 The descriptor categories listed here are not necessarily distinct,
 many hybrid descriptors have been described that combine one or more
@@ -300,9 +304,10 @@ described that includes both deterministic, geometry derived
 descriptors \cite{Edvinsson:2003bh} as well as stochastic methods
 \cite{Gonzales-Diaz:2003ly}. For the case of polypeptides the
 descriptors generally tend to be based on the individual amino
-acids. Examples include the VHSE family of descriptors described by
-Mei et al \cite{Mei:2005kx}, a set of side chain descriptors from
-Collantes and Dunn \cite{Collantes:1995vn}, field based descriptors
+acids. Examples include the Vector of Hydrophobic, Steric, and
+Electronic (VHSE) family of descriptors described by Mei et al
+\cite{Mei:2005kx}, a set of side chain descriptors from Collantes and
+Dunn \cite{Collantes:1995vn}, field based descriptors
 \cite{Norinder:1991ys} and the AAindex database
 \cite{Kawashima:1999zr} which allows rapid lookup of amino acid
 properties.
@@ -329,12 +334,13 @@ so far are derived from some form of chemical structure, an
 alternative approach is to employ observed biological activities of a
 molecule as descriptors of that molecule.  This approach was taken by
 Sedykh et al \cite{Sedykh:2011fk} who hypothesized that dose response
-data points from high throughput dose-response assays could be employed
-as biological descriptors. They observed that when such descriptors
-were combined with traditional chemical structure descriptors, the
-predictive performance of models developed using the combined set was
-better than those developed using conventional approaches. A similar
-approach can be taken using the PASS methodology
+data points from high throughput dose-response assays could be
+employed as biological descriptors. They observed that when such
+descriptors were combined with traditional chemical structure
+descriptors, the predictive performance of models developed using the
+combined set was better than those developed using conventional
+approaches. A similar approach can be taken using the Prediction of
+Biological Activity Spectra for Chemical Substances (PASS) methodology
 \cite{Poroikov:2007aa}, though this is an indirect method - one must
 predict the PASS profile from the chemical structure, which can then
 be used in subsequent predictive models.
@@ -420,7 +426,7 @@ simply need a descriptor matrix for modeling or searching. As a
 result, GUI or command line wrappers around descriptor APIs enable
 easier usage. The CDKDescUI application
 (\url{http://rguha.net/code/java/cdkdesc.html}) is a Java Swing
-application that exposes the Chemistry Development Kit (CDK) descriptor and fingerprint API's. It
+application that exposes the CDK descriptor and fingerprint API's. It
 allows the users to specify a SMILES or SD file and evaluate a
 selected set of descriptors or fingerprints and export them to a text
 file. The application also has a command line mode that can be run in
@@ -440,18 +446,17 @@ web technologies for descriptor calculation~\cite{Chepelev2011b}.
 
 In addition to libraries and their wrappers there are various GUI
 applications that allow easy descriptor calculations. Examples include
-Bioclipse \cite{Spjuth:2007aa} (see Figure~\ref{fig:tools}), MOE (Chemical Computing Group) and
-Maestro (Schr\"{o}dinger, Inc.) as standalone tools, but also
-as a plugin to Microsoft Excel, called LICSS~\cite{Lawson2011}.
-Workflow tools are also a useful
-class of applications for descriptor generation and allow one to
-easily generate descriptors from multiple sources~\cite{Truszkowski2011}
-(see Figure~\ref{fig:tools}). Given the focus of
-this article on Open Source implementations, we have noted the
-availability in Table \ref{tab:impl}. While a number of
-implementations are not strictly Open Source according to OSI
-definitions, the fact that they provide free academic licenses does
-allow them to be used somewhat freely.
+Bioclipse \cite{Spjuth:2007aa} (see Figure~\ref{fig:tools}), MOE
+(Chemical Computing Group) and Maestro (Schr\"{o}dinger, Inc.) as
+standalone tools, but also as a plugin to Microsoft Excel, called
+LICSS~\cite{Lawson2011}.  Workflow tools are also a useful class of
+applications for descriptor generation and allow one to easily
+generate descriptors from multiple sources~\cite{Truszkowski2011} (see
+Figure~\ref{fig:tools}). Given the focus of this article on Open
+Source implementations, we have noted the availability in Table
+\ref{tab:impl}. While a number of implementations are not strictly
+Open Source according to OSI definitions, the fact that they provide
+free academic licenses does allow them to be used somewhat freely.
 
 Due to our experience with the CDK project we provide a brief overview
 of the architecture of the descriptor calculations implemented by the
@@ -541,19 +546,20 @@ have used a number of commonly used names. When performing
 calculations in an automated manner, or employing remote services for
 descriptor calculations \cite{Dong:2007aa}, it is useful to be able to
 refer to descriptors via a standardized naming scheme. Currently the
-QSAR modeling community lacks such a scheme, though the CDK, a Java library for cheminformatics
-\cite{Steinbeck:2006aa} does implement such a scheme. The ``descriptor
-specification'' approach defines a set of classes that include
-information of the implementation title, identifier and vendor. The
-identifier may or may not include a version number. The actual details
-of the a descriptor are listed in a dictionary, along with an optional
-namespace. The dictionary entry is referenced by the descriptor
-specification and this design thus allows one to seamlessly work with
-multiple implementations of the same descriptor from different vendors
-and keep track of which version is employed throughout a calculation
-or workflow. In addition, the CDK provides a hierarchical annotation
-of descriptors, grouping them into different classes. Since this
-annotation is based on RDF \cite{Taylor:2006ab}, it allows one to go
+QSAR modeling community lacks such a scheme, though the CDK, a Java
+library for cheminformatics \cite{Steinbeck:2006aa} does implement
+such a scheme. The ``descriptor specification'' approach defines a set
+of classes that include information of the implementation title,
+identifier and vendor. The identifier may or may not include a version
+number. The actual details of the a descriptor are listed in a
+dictionary, along with an optional namespace. The dictionary entry is
+referenced by the descriptor specification and this design thus allows
+one to seamlessly work with multiple implementations of the same
+descriptor from different vendors and keep track of which version is
+employed throughout a calculation or workflow. In addition, the CDK
+provides a hierarchical annotation of descriptors, grouping them into
+different classes. Since this annotation is based on the Resource
+Description Framework (RDF) \cite{Taylor:2006ab}, it allows one to go
 beyond simple groupings and perform reasoning on descriptors. A simple
 example is to identify functionally equivalent descriptors (such as
 simple transformations of a base descriptor - square and cube roots of
@@ -566,7 +572,8 @@ software using the CDK descriptors, such as
 Bioclipse~\cite{Spjuth2010} and Ambit~\cite{Jelizakova2011}. Moreover,
 the ideas have been adopted by the CHEMINF ontology for
 cheminformatics~\cite{Hastings2011}, which is used by the CHESS
-framework which also uses the CDK for descriptor calculations~\cite{Chepelev2011b}.
+framework which also uses the CDK for descriptor
+calculations~\cite{Chepelev2011b}.
 
 
 \section{Summary}
@@ -579,23 +586,25 @@ software. Though the bulk of descriptors are well defined in the
 literature, multiple implementations of the same descriptor can yield
 different results. These differences arise from differences in the
 underlying chemistry models and reference data used by the
-implementations. As shown by Gupta et al \cite{Gupta:2010uq},
-the performance of predictive models developed using commercial or
-Open Source descriptor implementations is very similar. While
-different tools differ in the specific number and types of descriptors
-that they calculate, the fact many descriptors are correlated with
-others suggests that it does not matter too much which set of
-descriptors are used in an application. Of course, this cannot be a
-general rule - specific applications may require a specific set of
-descriptors. This is not to say that all descriptor tools exhibit
-similar performance. For example, it is clear from Figure \ref{fig:logp}
-that the ACD Labs implementation of log P performs significantly
-better than other implementations. Though this is not a completely
-rigorous comparison (the methods underlying the ACD Labs, CDK and
-ChemAxon implementations are different), it does highlight that
-certain implementations of a descriptor can fare better than others -
-especially those cases where the descriptor is based on a predictive
-model. 
+implementations. As shown by Gupta et al \cite{Gupta:2010uq}, the
+performance of predictive models developed using commercial or Open
+Source descriptor implementations is very similar. While different
+tools differ in the specific number and types of descriptors that they
+calculate, the fact many descriptors are correlated with others
+suggests that it does not matter too much which set of descriptors are
+used in an application. Of course, this cannot be a general rule -
+specific applications may require a specific set of descriptors. For
+example, a predictive model for boiling points may not peform very
+well if branching and intermolecular forces are not taken into account
+by the descriptors in the model. This is not to say that all
+descriptor tools exhibit similar performance. For example, it is clear
+from Figure \ref{fig:logp} that the ACD Labs implementation of log P
+performs significantly better than other implementations. Though this
+is not a completely rigorous comparison (the methods underlying the
+ACD Labs, CDK and ChemAxon implementations are different), it does
+highlight that certain implementations of a descriptor can fare better
+than others - especially those cases where the descriptor is based on
+a predictive model.
 
 Given these challenges it is imperative that descriptor tools provide
 access to version information. This allows the user to provide an
