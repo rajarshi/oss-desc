@@ -4,8 +4,14 @@ library(ggplot2)
 
 acd <- read.table('all-clean.acd', sep='\t', header=TRUE, as.is=TRUE)
 cdk <- read.table('all-clean.cdk', sep='\t', header=TRUE, as.is=TRUE)
-
 tmp <- data.frame(ACD=acd$ACD_RuleOf5_PSA, CDK=cdk$TopoPSA)
+
+ggplot(tmp, aes(x=CDK,y=ACD))+
+  geom_point(size=1.5,alpha=0.25)+
+  geom_smooth()+
+#  scale_x_continuous(limits=c(0,1500))+
+  xlab('CDK TPSA')+ylab("ACD TPSA")
+
 xyplot(ACD ~ CDK, tmp, type=c('p', 'g'), col='black', cex=0.25,
        xlab=list(label='CDK TPSA', cex=1.2),
        ylab=list(label='ACD TPSA', cex=1.2),

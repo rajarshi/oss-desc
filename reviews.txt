@@ -51,6 +51,8 @@ logP implementation
 
 11.  Figure 1.  This could use a better figure heading.  Units would be nice. 
 
+Updated
+
 Second, general suggestions (take’em or leave em).
 
 1.  It would be good to have some more specific examples – perhaps in
