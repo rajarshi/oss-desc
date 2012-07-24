@@ -45,7 +45,7 @@ that the ACD set simply has more compounds from logPstar in the
 training set – and therefore gives the appearance of performing
 better.
 
-It is possible that ACS has more compounds from logPstar, but at this
+It is possible that ACD has more compounds from logPstar, but at this
 point we are not privy to the training set employed by ACD for their
 logP implementation
 
@@ -53,13 +53,27 @@ logP implementation
 
 Second, general suggestions (take’em or leave em).
 
-1.     It would be good to have some more specific examples – perhaps in the beginning or section 2 – to highlight or show some descriptors.  The journal is Current Topics in Medicinal Chemistry.  Med-chemists love structures and would probably get more out of it if there were some very simple examples at the start.
+1.  It would be good to have some more specific examples – perhaps in
+the beginning or section 2 – to highlight or show some descriptors.
+The journal is Current Topics in Medicinal Chemistry.  Med-chemists
+love structures and would probably get more out of it if there were
+some very simple examples at the start.
+
+A figure has been added to provide a high level summary of descriptor
+classes. In addition, the text has been updated (Section 2) to provide
+some concrete examples of descriptors
 
 2.     ***Abbreviation summary would be very helpful.
 
 Abbreviations have been included or expanded, where relevant.
 
-3.     I feel like section 3 could use some more work.  “What is a useful descriptor?”  Do the authors know?  Does it depend on the problem:  potency model?  ADME?  Clustering/similarity?  Certainly the authors know a little bit about visualization.  Feel free to give some expert opinion.
+3.  I feel like section 3 could use some more work.  “What is a useful
+descriptor?”  Do the authors know?  Does it depend on the problem:
+potency model?  ADME?  Clustering/similarity?  Certainly the authors
+know a little bit about visualization.  Feel free to give some expert
+opinion.
+
+XXX
 
 4.  What about problems?  If I have 1000 descriptors and only 200
 measured values – what can be done?  Is this considered outside the

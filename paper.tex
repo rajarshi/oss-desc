@@ -151,15 +151,21 @@ these descriptors is that do not require any intensive pre-processing
 steps such as 3D coordinate generation and conformational analysis. In
 addition, many graph invariants can be rapidly computed for graphs
 corresponding to small molecule structures (even though they may be
-computationally intractable on much larger graphs). While this class
-of descriptors have been used extensively in predictive modeling
-applications
-\cite{Garcia-Domenech:2008aa,Randic:2001ad,Besalu:2001aa}, a key
-drawback is their lack of interpretability. The abstract nature of
-many graph invariants and information theoretic descriptors, their use
-in predictive models makes it difficult to explain the model in simple
-physicochemical terms, though various attempts have been made at
-interpretations \cite{Todeschini:1975dq,Stanton:2003aa}.
+computationally intractable on much larger graphs). An example of a
+topological descriptor is the Wiener index
+\cite{Nikolic:2001aa,Wiener:1947aa}. It is simply the sum of the edge
+counts in the shortest paths between all pairs of non-hydrogen
+atoms. From a physical standpoint, the descriptor characterizes the
+branching in a molecular structure. While this class of descriptors
+have been used extensively in predictive modeling applications
+\cite{Garcia-Domenech:2008aa,Randic:2001ad,Besalu:2001aa} (for
+example, the Wiener index described above has been useful in models of
+boiling point data), a key drawback is their general lack of
+interpretability. The abstract nature of many graph invariants and
+information theoretic descriptors, their use in predictive models
+makes it difficult to explain the model in simple physicochemical
+terms, though various attempts have been made at interpretations
+\cite{Todeschini:1975dq,Stanton:2003aa}.
 
 Geometric descriptors require a 3D conformation as input and therefore
 the computations are not as fast as topological descriptors which do
