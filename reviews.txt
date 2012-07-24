@@ -3,7 +3,9 @@
 In fact "time complexity" was intended (http://en.wikipedia.org/wiki/Time_complexity)
 
 
-7.     Page 9.  Line 9.  “Every descriptor implements an interface…”  The descriptors do not actually implement anything.  What are the authors saying here?
+7.  Page 9.  Line 9.  “Every descriptor implements an interface…” The
+descriptors do not actually implement anything.  What are the authors
+saying here?
 
 Updated to note that descriptor *classes* implement the interface
 
@@ -36,11 +38,21 @@ actually related at a more fndamental level).
 
 However, the text has been updated to make this point more explicitly.
 
-9.     Page 11.  Just down a few lines.  The comment that ACD does much better.  Do the authors know the overlap between the logPstar dataset and ACD/XlogP/ChemAxon?  Is there a reference for this work?  I worry that the ACD set simply has more compounds from logPstar in the training set – and therefore gives the appearance of performing better.
+9.  Page 11.  Just down a few lines.  The comment that ACD does much
+better.  Do the authors know the overlap between the logPstar dataset
+and ACD/XlogP/ChemAxon?  Is there a reference for this work?  I worry
+that the ACD set simply has more compounds from logPstar in the
+training set – and therefore gives the appearance of performing
+better.
+
+It is possible that ACS has more compounds from logPstar, but at this
+point we are not privy to the training set employed by ACD for their
+logP implementation
 
 11.  Figure 1.  This could use a better figure heading.  Units would be nice. 
 
 Second, general suggestions (take’em or leave em).
+
 1.     It would be good to have some more specific examples – perhaps in the beginning or section 2 – to highlight or show some descriptors.  The journal is Current Topics in Medicinal Chemistry.  Med-chemists love structures and would probably get more out of it if there were some very simple examples at the start.
 
 2.     ***Abbreviation summary would be very helpful.
@@ -49,4 +61,14 @@ Abbreviations have been included or expanded, where relevant.
 
 3.     I feel like section 3 could use some more work.  “What is a useful descriptor?”  Do the authors know?  Does it depend on the problem:  potency model?  ADME?  Clustering/similarity?  Certainly the authors know a little bit about visualization.  Feel free to give some expert opinion.
 
-4.     What about problems?  If I have 1000 descriptors and only 200 measured values – what can be done?  Is this considered outside the scope of the review?  I would think that the descriptor reduction problem and descriptors are related enough to deserve a comment. 
+4.  What about problems?  If I have 1000 descriptors and only 200
+measured values – what can be done?  Is this considered outside the
+scope of the review?  I would think that the descriptor reduction
+problem and descriptors are related enough to deserve a comment.
+
+A detailed description of descriptor selection/reduction and the
+problems with data mining in general would be useful, but also
+somewhat off-topic, as this article focuses on the descriptors
+themselves. Certainly, we could write another 5 or 10 pages on this
+topic! However, we have mentioned the problem of subset selection
+(page 2)
