@@ -22,8 +22,8 @@ MOE VSA and Jurs/Stanton CPSA) and choosing amongst related descriptor
 types may not have a substantial impact on certain
 results/applications.” 
 
-While it is true that there are ovleraps between descriptor types, and
-that choosing one type ofdescriptor over another, assuming they are
+While it is true that there are overlaps between descriptor types, and
+that choosing one type of descriptor over another, assuming they are
 related, will not really change a model, the exact same thing can be
 said of numerically correlated descriptors. We did not mention
 anywhere that swapping atom-pair fingerprints with QM descriptors is a
@@ -32,7 +32,9 @@ valid procedure.
 However if descriptor X and descriptor Y are numerically correlated
 (as measured by a high Pearsons correlation value), then a predictive
 model where X is replaced with Y will not show any significant
-changes. This is true even if X & Y characterize differenct aspects of
+changes (though it can have major impact on
+prediction results of independent test sets, but you cannot select
+descriptors based on that.). This is true even if X & Y characterize different aspects of.
 the molecule (but indicates that these 'different' aspects are
 actually related at a more fndamental level).
 
