@@ -77,7 +77,11 @@ potency model?  ADME?  Clustering/similarity?  Certainly the authors
 know a little bit about visualization.  Feel free to give some expert
 opinion.
 
-XXX
+The characteristics of a useful descriptor have been described in the
+past and focus primarily on numerical
+characterstics. One can also look at the usefulness of a descriptor
+in the context of the propery being modeled and the text has been
+updated to discuss this.
 
 4.  What about problems?  If I have 1000 descriptors and only 200
 measured values – what can be done?  Is this considered outside the

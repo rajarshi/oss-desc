@@ -369,25 +369,29 @@ descriptors can be used to predict bond properties.
 \section{What is a Useful Descriptor?}
 \label{sec:what-usef-descr}
 
-Given that we can generate thousands of descriptors,  it is critical to ask, what
-makes a descriptor useful? Fundamentally, a descriptor must correlate
-structural features with some physicochemical property and show
-minimal correlation with other descriptors. In addition, a generally
-useful descriptor will be applicable to a broad class of
+Given that we can generate thousands of descriptors, it is critical to
+ask, what makes a descriptor useful? Fundamentally, a descriptor must
+correlate structural features with some physicochemical property and
+show minimal correlation with other descriptors. In addition, a
+generally useful descriptor will be applicable to a broad class of
 molecules. Furthermore, a descriptor should show minimal
 degeneracy. That is, the descriptor should generate different values
 for structurally different molecules, even if the structural
 differences are small. An example is the case of stereochemistry. Most
-constitutional and topological descriptors that are not designed to take this into account will
-generate the same numerical values for all the stereoisomers of a
-given chiral molecule. We would consider such a descriptor to be
-degenerate. In addition to degeneracy, a descriptor should be
-continuous, in the sense, that small structural changes should lead to
-small changes in the value of the descriptor.
+constitutional and topological descriptors that are not designed to
+take this into account will generate the same numerical values for all
+the stereoisomers of a given chiral molecule. We would consider such a
+descriptor to be degenerate. In addition to degeneracy, a descriptor
+should be continuous, in the sense, that small structural changes
+should lead to small changes in the value of the descriptor.
 
 The requirements listed here ensures that subsequent analyses
-involving descriptors are robust. But in addition to numerical
-robustness, it is important for many scenarios that the descriptor
+involving descriptors are robust. But there are other aspects of a
+descriptor that can make it more or less useful. For example,a
+descriptor that can be rapidly calculated and is not dependent on
+experimental properties can be considered more useful than one that is
+computationally intensive and / or dependent on experimental
+results. In addition, it is important for many scenarios that the descriptor
 have some form of physical interpretability.  For example, a model
 that employs descriptors to predict cytotoxicity will be most useful if
 it is numerically accurate as well as providing insight into which
@@ -398,7 +402,7 @@ values back to the structure for visualization purposes such as the
 ``Glowing Molecule'' depictions of Segall et al
 \cite{Segall:2009fk}. Such visualizations are practical only when
 descriptor values can be related to structural features. Examples
-include surface based descriptors such as CPSA's as well as explicit
+include surface based descriptors such as CPSA's as well as explicit  
 structural descriptors such as paths, chains etc.
 
 However, there are certain scenarios where some of the above
@@ -419,6 +423,25 @@ which would represent a large family of molecules, such that the
 target molecule would be hidden. This is likely unreliable as it would
 be difficult to perform analyses (e.g., predictive models) with such
 descriptors.
+
+This discussion has focused on aspects of descriptors that make them
+useful in computational models. It is also relevant to note that the
+utility of a descriptor can be dependent on the problem being
+considered. More specifically, certain end points may require specific
+molecular features to be taken into account. Descriptors that do not,
+will not be useful in developing models for that endpoint. For
+example, an accurate boiling point model will require descriptors that
+capture information regarding molecular branching, hydrogen bonding
+potential and so on. Similarly, a model to predict activity against a
+cytoplasmic or nuclear target, will likely require that molecular
+characteristics enabling passage across the cell membrane be taken
+into account. In such a case, a descriptor characterizing the
+lipophilicity of the molecule will be useful. These points also apply
+to other types of computational approaches, such as clustering. In the
+end, the utility of a descriptor is determined by whether it encapsulates
+sufficient and relevant information. In general a single descriptor
+will not satisfy these requirements and thus one usually works with
+sets of descriptors.
 
 \section{Descriptor Implementations}
 \label{sec:descr-impl}
@@ -702,8 +725,9 @@ molecular structure more realistically.}, cap={}, botcap,figure, label={fig:repr
 
 \ctable[caption={A comparison of the VABC descriptor for molecular
   volume (as implemented by the CDK) and other approximate
-  implementations of molecular volume (as implemented by MOE
-  2008.10). All values are in \AA$^{3}$ and both plots are overlaid with a loess fit.},cap={},label={fig:molvol},botcap,figure]
+  implementations of molecular volume (a 2D approach and a grid based
+  approach), as implemented by MOE
+  2008.10. All values are in \AA$^{3}$ and both plots are overlaid with a loess fit.},cap={},label={fig:molvol},botcap,figure]
 {c}
 {}
 {
